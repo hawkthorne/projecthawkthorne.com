@@ -1,0 +1,14 @@
+---
+layout: default
+title: Journey to the Center of Hawkthorne Sprites
+---
+<h2>Sprites</h2>
+<ul class="sprites">
+{% for sprite in sprites %}
+<li>
+  <p class="title">{{ sprite.name }}</p>
+  <p>By <a ref="author" href="http://reddit.com/u/{{sprite.artist}}">{{sprite.artist}}</a></p>
+  <a href="{{sprite.sprite_url}}"><img src="{{ sprite.sprite_url}}" alt="{{ sprite.name }}"/></a>
+</li>
+{% endfor %}
+</ul>

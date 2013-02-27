@@ -7,6 +7,9 @@ future:      true
 lsi:         false
 pygments:    true
 markdown:    redcarpet
+exclude:
+  - scripts
+  - templates
 
 title: Journey to the Center of Hawkthorne
 url: http://projecthawkthorne.com
