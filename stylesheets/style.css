@@ -20,4 +20,37 @@ nav a:first-child:before {
   content: "";
 }
 
+ul.sprites {
+  margin: 0;
+  padding: 0;
+}
+
+p.title {
+  font-weight: bold;
+}
+
+ul.sprites p {
+  margin: 0 0 2px 0;
+}
+
+
+ul.sprites p, ul.sprites img {
+  display: block;
+}
+
+
+ul.sprites li {
+  list-style-type: none;
+  padding: 0;
+  width: 190px;
+  display: inline-block;
+  background: none;
+  vertical-align: top;
+  margin-bottom: 10px;
+}
+
+ul.sprites img {
+  margin: auto;
+  max-width: 100%;
+}
 
