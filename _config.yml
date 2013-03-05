@@ -10,6 +10,9 @@ markdown:    redcarpet
 exclude:
   - scripts
   - templates
+  - Makefile
+  - requirements.txt
+  - .gitignore
 
 title: Journey to the Center of Hawkthorne
 url: http://projecthawkthorne.com
