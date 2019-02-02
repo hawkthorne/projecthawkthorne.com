@@ -6,8 +6,8 @@ title: Journey to the Center of Hawkthorne Item Sprites
 <ul class="sprites">
 {% for sprite in sprites %}
 <li>
-  <p class="title">{{ sprite.name }}</p>
-  <p>By <a ref="author" href="http://reddit.com/u/{{sprite.artist}}">{{sprite.artist}}</a></p>
+  <h3>{{ sprite.name }}</h3>
+  <small>By <a ref="author" href="http://reddit.com/u/{{sprite.artist}}">{{sprite.artist}}</a></small>
   <a href="{{sprite.url}}"><img src="{{ sprite.url}}" alt="{{ sprite.name }}"/></a>
 </li>
 {% endfor %}
