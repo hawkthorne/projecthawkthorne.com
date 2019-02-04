@@ -106,8 +106,8 @@ h1 a {
   width:100%;
   margin:0 auto;
   transform: translateY(0px);
-  animation: raiseHeader 2s 1 ease-in-out;
 }
+.index h1 a {animation: raiseHeader 2s 1 ease-in-out;}
 h1 a:visited {opacity: 0.5}
 h1 a:hover {color:transparent;}
 h1 a:after,
