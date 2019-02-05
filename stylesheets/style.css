@@ -1,56 +1,256 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans-regular-webfont.eot');
+  src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-regular-webfont.woff') format('woff'),
+       url('../fonts/opensans-regular-webfont.ttf') format('truetype'),
+       url('../fonts/opensans-regular-webfont.svg#OpenSansRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans-italic-webfont.eot');
+  src: url('../fonts/opensans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-italic-webfont.woff') format('woff'),
+       url('../fonts/opensans-italic-webfont.ttf') format('truetype'),
+       url('../fonts/opensans-italic-webfont.svg#OpenSansItalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans-bold-webfont.eot');
+  src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-bold-webfont.woff') format('woff'),
+       url('../fonts/opensans-bold-webfont.ttf') format('truetype'),
+       url('../fonts/opensans-bold-webfont.svg#OpenSansBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans-bolditalic-webfont.eot');
+  src: url('../fonts/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-bolditalic-webfont.woff') format('woff'),
+       url('../fonts/opensans-bolditalic-webfont.ttf') format('truetype'),
+       url('../fonts/opensans-bolditalic-webfont.svg#OpenSansBoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans-extrabold-webfont.eot');
+  src: url('../fonts/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-extrabold-webfont.woff') format('woff'),
+       url('../fonts/opensans-extrabold-webfont.ttf') format('truetype'),
+       url('../fonts/opensans-extrabold-webfont.svg#OpenSansExtrabold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {line-height: 1.15;}
+body {margin: 0;}
+main {display: block;}
+h1 {font-size: 2em;margin: 0.67em 0;}
+hr {box-sizing: content-box;height: 0;overflow: visible;}
+a {background-color: transparent;}
+b,strong {font-weight: bolder;}
+small {font-size: 80%;}
+img {border-style: none;}
+
+* {box-sizing:border-box;}
+
 body {
-  background: #20cefa url('../images/background.png');
+  font:15px/1.5 'Open Sans';
+  background:#20cefa url(/images/background.png);
+  padding:1em;
+  color:rgb(93,69,65);
+}
+
+a {color:rgb(105,132,170);text-decoration:none;}
+a:hover{color:rgb(56,81,140);}
+
+p {margin:0 0 1.5em;}
+
+ul {list-style:none;padding-left:2em;}
+li {
+  padding-left:1em;
+  background:url(/images/chevron.png) left center no-repeat;
+}
+
+@keyframes raiseHeader {
+  0% { opacity: 0; transform: translateY(100px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@keyframes sparkle {
+  from      { background-position: 0px 0px; }
+  to        { background-position: -192px 0px; }
+}
+
+h1 {
+  position:relative;
+  margin:0;
+}
+h1 a {
+  display: block;
+  color:transparent;
+  background:url(/images/logo.png) center center / contain no-repeat;
+  min-height:30vmax;
+  height:100%;
+  width:100%;
+  margin:0 auto;
+  transform: translateY(0px);
+}
+.index h1 a {animation: raiseHeader 2s 1 ease-in-out;}
+h1 a:visited {opacity: 0.5}
+h1 a:hover {color:transparent;}
+h1 a:after,
+h1 a:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(/images/sparkle.png) no-repeat;
+    animation: sparkle 1s steps(4) infinite;
+    transform: scale(1.5);
+}
+h1 a:after {left:15%;top:70%;}
+h1 a:before {left:75%;top:30%;animation-delay: 0.75s;}
+
+h2 {
+  color:rgb(103,74,158);
+  font-style:italic;
+  text-align: center;
+  position: relative;
+  border-bottom:1.5px solid rgb(180,156,130);
+  margin-top:0;
+}
+h2:after {
+  position: absolute;
+  content:"";
+  display:block;
+  width:100%;
+  height:100%;
+  border-bottom:inherit;
+  top:3px;
+}
+
+.wrapper {
+  width:100%;
+  max-width:650px;
+  margin:0 auto;
 }
 
 nav {
-  text-align: center;
-  background: #7C334F;
-  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content:space-evenly;
 }
-
-nav a, nav a:hover{
-  color: white;
+nav a {
+  text-decoration: none;
+  background:rgb(105,132,170);
+  color:#FFF;
+  padding:0.3em 0.5em;
+  margin-bottom:5px;
 }
+nav a:hover {background:rgb(56,81,140);color:#FFF;}
 
-nav a:before {
-  content: " | ";
+section {
+  position: relative;
+  background:#FFF;
+  padding:1em;
+  margin:1em 0 2em;
 }
-
-nav a:first-child:before {
+section:before,
+section:after {
   content: "";
+  display: block;
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100%;
+  left: -10px;
+  top: -10px;
+  position: absolute;
+  z-index: -1;
 }
+section:before {top:10px;left:10px;}
 
 ul.sprites {
-  margin: 0;
-  padding: 0;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  margin:0;
+  padding:0;
+}
+ul.sprites li {padding:0;background:none;}
+ul.sprites li h3 {line-height:0.5em;margin-bottom:0;font-size:100%;}
+ul.sprites li small {display:block;}
+ul.sprites li img {
+  max-width:100%;
 }
 
-p.title {
-  font-weight: bold;
+@keyframes dance {
+  0% {background-position: -192px -432px;}
+  25% {background-position: -576px -336px;}
+  50% {background-position: -576px -384px;}
+  75% {background-position: -192px -480px;}
+  100% {background-position: -384px -288px;}
 }
 
-ul.sprites p {
-  margin: 0 0 2px 0;
-}
-
-
-ul.sprites p, ul.sprites img {
+ul.sprites.characters h3 {text-align:center;margin-bottom:1em;}
+ul.sprites span.character {
   display: block;
+  margin:0 1em;
+  width:48px;
+  height:48px;
+  animation: dance 1s steps(1) infinite;
 }
+ul.sprites span.character.abed {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/base.png);}
+ul.sprites span.character.annie {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/base.png);}
+ul.sprites span.character.britta {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/base.png);}
+ul.sprites span.character.buddy {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/buddy/base.png);}
+ul.sprites span.character.chang {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/base.png);}
+ul.sprites span.character.dean {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/base.png);}
+ul.sprites span.character.duncan {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/duncan/base.png);}
+ul.sprites span.character.fatneil {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/fatneil/base.png);}
+ul.sprites span.character.garrett {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/garrett/base.png);}
+ul.sprites span.character.gilbert {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/gilbert/base.png);}
+ul.sprites span.character.guzman {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/guzman/base.png);}
+ul.sprites span.character.jeff {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/base.png);}
+ul.sprites span.character.leonard {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/leonard/base.png);}
+ul.sprites span.character.pierce {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/base.png);}
+ul.sprites span.character.rich {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/rich/base.png);}
+ul.sprites span.character.shirley {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/base.png);}
+ul.sprites span.character.troy {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/base.png);}
+ul.sprites span.character.vaughn {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vaughn/base.png);}
+ul.sprites span.character.vicedean {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicedean/base.png);}
+ul.sprites span.character.vicki {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicki/base.png);}
 
-
-ul.sprites li {
-  list-style-type: none;
-  padding: 0;
-  width: 190px;
+footer {
+  color:#FFF;
+  text-align:center;
+}
+footer p {
   display: inline-block;
-  background: none;
-  vertical-align: top;
-  margin-bottom: 10px;
+  background:rgba(0,0,0,0.3);
+  padding:1em;
 }
+footer a {color:rgb(169,230,202);}
+footer a:hover {color:rgb(149,211,186);}
 
-ul.sprites img {
-  margin: auto;
-  max-width: 100%;
+@media screen and (min-width:500px) {
+  header {margin-bottom:20px;}
+  h1 a {
+    min-height: 280px;
+  }
 }
-

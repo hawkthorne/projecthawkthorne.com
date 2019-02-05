@@ -2,68 +2,37 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
     <link rel="stylesheet" href="stylesheets/style.css"/>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-          $('#main_content').headsmart()
-          })
-    </script>
     <title>Journey to the Center of Hawkthorne</title>
   </head>
   <body>
-    <a id="forkme_banner" href="https://github.com/hawkthorne/hawkthorne-journey">View on GitHub</a>
-    <div class="shell">
-
+    <div class="wrapper {% if page.url == "/" %} index {% endif %}">
       <header>
-        <a href="index.html"><img src="images/logo.png" alt="Journey to the Center of Hawkthorne" /></a>
+        <h1><a href="index.html">Journey to the Center of Hawkthorne</a></h1>
       </header>
-
-      <section id="contentarea"> 
-        <section id="main_content">
-
-          <nav>
-            <a href="characters.html">Characters</a>
-	    <a href="sprites.html">Game Sprites</a>
-            <a href="soundtrack.html">Soundtrack</a>
-            <a href="sfx.html">Sound effects</a>
-            <a href="soundtrack-disc2.html">Community Chiptunes</a>
-          </nav>
-
-          <div class="separator"></div>
-
-          {{ content }}
-
-        </section>
-
-        <footer>
-          <p>this project by <a href="https://github.com/hawkthorne">hawkthorne</a> can be found on <a href="https://github.com/hawkthorne/hawkthorne-journey">GitHub</a></p>
-        </footer>
-
+      <nav>
+        <a href="characters.html">Characters</a>
+        <a href="sprites.html">Game Sprites</a>
+        <a href="soundtrack.html">Soundtrack</a>
+        <a href="sfx.html">Sound effects</a>
+        <a href="soundtrack-disc2.html">Community Chiptunes</a>
+      </nav>
+      <section>
+        {{ content }}
       </section>
-
+      <footer>
+        <p>this project by <a href="https://github.com/hawkthorne">hawkthorne</a> can be found on <a href="https://github.com/hawkthorne/hawkthorne-journey">GitHub</a></p>
+      </footer>
     </div>
-
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-      <script type="text/javascript">
-        try {
-          var pageTracker = _gat._getTracker("UA-32364586-1");
-          pageTracker._trackPageview();
-        } catch(err) {}
+      try {
+        var pageTracker = _gat._getTracker("UA-32364586-1");
+        pageTracker._trackPageview();
+      } catch(err) {}
     </script>
-    <a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
   </body>
 </html>

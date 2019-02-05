@@ -3,10 +3,10 @@ safe:        true
 source:      .
 destination: ./_site
 
-future:      true
+future:      false
 lsi:         false
-pygments:    true
-markdown:    redcarpet
+highlighter: false
+markdown:    kramdown
 exclude:
   - scripts
   - templates
