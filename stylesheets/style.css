@@ -199,43 +199,6 @@ ul.sprites li img {
   max-width:100%;
 }
 
-@keyframes dance {
-  0% {background-position: -192px -432px;}
-  25% {background-position: -576px -336px;}
-  50% {background-position: -576px -384px;}
-  75% {background-position: -192px -480px;}
-  100% {background-position: -384px -288px;}
-}
-
-ul.sprites.characters h3 {text-align:center;margin-bottom:1em;}
-ul.sprites span.character {
-  display: block;
-  margin:0 1em;
-  width:48px;
-  height:48px;
-  animation: dance 1s steps(1) infinite;
-}
-ul.sprites span.character.abed {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/base.png);}
-ul.sprites span.character.annie {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/base.png);}
-ul.sprites span.character.britta {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/base.png);}
-ul.sprites span.character.buddy {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/buddy/base.png);}
-ul.sprites span.character.chang {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/base.png);}
-ul.sprites span.character.dean {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/base.png);}
-ul.sprites span.character.duncan {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/duncan/base.png);}
-ul.sprites span.character.fatneil {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/fatneil/base.png);}
-ul.sprites span.character.garrett {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/garrett/base.png);}
-ul.sprites span.character.gilbert {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/gilbert/base.png);}
-ul.sprites span.character.guzman {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/guzman/base.png);}
-ul.sprites span.character.jeff {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/base.png);}
-ul.sprites span.character.leonard {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/leonard/base.png);}
-ul.sprites span.character.pierce {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/base.png);}
-ul.sprites span.character.rich {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/rich/base.png);}
-ul.sprites span.character.shirley {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/base.png);}
-ul.sprites span.character.troy {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/base.png);}
-ul.sprites span.character.vaughn {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vaughn/base.png);}
-ul.sprites span.character.vicedean {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicedean/base.png);}
-ul.sprites span.character.vicki {background-image:url(https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicki/base.png);}
-
 footer {
   color:#FFF;
   text-align:center;

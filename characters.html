@@ -3,125 +3,1217 @@ layout: default
 title: Journey to the Center of Hawkthorne 8-bit Character Sprites
 ---
 <h2>Character Sprites</h2>
-<ul class="sprites characters">
-  <li>
-    <h3>Abed</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/base.png">
-      <span class="character abed">
-    </a>
-  </li>
-  <li>
-    <h3>Annie</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/base.png">
-      <span class="character annie">
-    </a>
-  </li>
-  <li>
-    <h3>Britta</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/base.png">
-      <span class="character britta">
-    </a>
-  </li>
-  <li>
+
+<style>
+div.character-wrapper {
+  position: relative;
+  max-width:350px;
+  margin:0 auto;
+}
+div.select {
+  box-shadow: inset 2px 2px 8px rgba(0,0,0,0.7);
+  max-height:210px;
+  margin-bottom:200px;
+  width:100%;
+  overflow-y:scroll;
+}
+div.select h3 {
+  text-align: center;
+  border-bottom: 2px solid;
+  margin: 1em;
+}
+div.select input {display:none;}
+div.select label {
+  display:block;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  padding: 0.25em 1em;
+}
+div.select label:before {
+  content:"";
+  display:inline-block;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  background-repeat:no-repeat;
+}
+div.select label + input + label {
+  border-top: 1px solid #CCC;
+}
+div.select label:hover {
+  background-color:rgba(0,0,0,0.1);
+}
+div.select input:checked + label {
+  background-color:rgba(56,81,140,0.6);
+  color:#FFF;
+}
+input.abed + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/overworld.png");}
+input.annie + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/overworld.png");}
+input.britta + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/overworld.png");}
+input.buddy + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/buddy/overworld.png");}
+input.chang + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/overworld.png");}
+input.dean + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/overworld.png");}
+input.duncan + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/duncan/overworld.png");}
+input.fatneil + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/fatneil/overworld.png");}
+input.garrett + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/garrett/overworld.png");}
+input.gilbert + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/gilbert/overworld.png");}
+input.guzman + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/guzman/overworld.png");}
+input.jeff + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/overworld.png");}
+input.leonard + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/leonard/overworld.png");}
+input.pierce + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/overworld.png");}
+input.rich + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/rich/overworld.png");}
+input.shirley + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/overworld.png");}
+input.troy + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/overworld.png");}
+input.vaughn + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vaughn/overworld.png");}
+input.vicedean + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicedean/overworld.png");}
+input.vicki + label:before {background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicki/overworld.png");}
+
+input.abed.base + label:before {background-position: 0px 0px;}
+input.abed.alien + label:before {background-position: -36px 0;}
+input.abed.batman + label:before {background-position: -72px 0px;}
+input.abed.bert + label:before {background-position: -1260px 0px;}
+input.abed.britta + label:before {background-position: -828px 0px;background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/overworld.png");}
+input.abed.jamielee + label:before {background-position: -1620px 0px;}
+input.abed.bee + label:before {background-position: -108px 0px;}
+input.abed.camo + label:before {background-position: -144px 0px;}
+input.abed.cape + label:before {background-position: -792px 0px;}
+input.abed.chang + label:before {background-position: -756px 0px;background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/overworld.png");}
+input.abed.mafia + label:before {background-position: -1332px 0px;}
+input.abed.hurt + label:before {background-position: -1008px 0px;}
+input.abed.elf + label:before {background-position: -1080px 0px;}
+input.abed.christmas + label:before {background-position: -180px 0px;}
+input.abed.paint + label:before {background-position: -216px 0px;}
+input.abed.cowboy + label:before {background-position: -252px 0px;}
+input.abed.creepy + label:before {background-position: -1584px 0px;}
+input.abed.rasalghul + label:before {background-position: -1476px 0px;}
+input.abed.andre + label:before {background-position: -1440px 0px;}
+input.abed.disco + label:before {background-position: -1044px 0px;}
+input.abed.drunk + label:before {background-position: -1224px 0px;}
+input.abed.maiden + label:before {background-position: -1116px 0px;}
+input.abed.evil + label:before {background-position: -288px 0px;}
+input.abed.fine + label:before {background-position: -684px 0px;}
+input.abed.gangster + label:before {background-position: -324px 0px;}
+input.abed.baby + label:before {background-position: -900px 0px;}
+input.abed.solo + label:before {background-position: -360px 0px;}
+input.abed.poplock + label:before {background-position: -1296px 0px;}
+input.abed.hobgoblin + label:before {background-position: -1548px 0px;}
+input.abed.morning + label:before {background-position: -504px 0px;}
+input.abed.inspector + label:before {background-position: -396px 0px;}
+input.abed.clubs + label:before {background-position: -1188px 0px;}
+input.abed.jbv + label:before {background-position: -1404px 0px;}
+input.abed.jeff + label:before {background-position: -432px 0px;background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/overworld.png");}
+input.abed.jeffshirt + label:before {background-position: -972px 0px;}
+input.abed.white + label:before {background-position: -468px 0px;}
+input.abed.mcclane + label:before {background-position: -720px 0px;}
+input.abed.kyle + label:before {background-position: -1152px 0px;}
+input.abed.king + label:before {background-position: -540px 0px;}
+input.abed.naked + label:before {background-position: -1656px 0px;}
+input.abed.pierce + label:before {background-position: -576px 0px;background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/overworld.png");}
+input.abed.radar + label:before {background-position: -1368px 0px;}
+input.abed.plumber + label:before {background-position: -936px 0px;}
+input.abed.patrick + label:before {background-position: -1512px 0px;}
+input.abed.sewn + label:before {background-position: -612px 0px;}
+input.abed.troy + label:before {background-position: -864px 0px;background-image:url("https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/overworld.png");}
+input.abed.zombie + label:before {background-position: -648px 0px;}
+
+input.annie.base + label:before {background-position: -0px 0px;}
+input.annie.abed + label:before {background-position: -108px 0px;}
+input.annie.hearts + label:before {background-position: -252px 0px;}
+input.annie.kim + label:before {background-position: -288px 0px;}
+input.annie.armor + label:before {background-position: -72px 0px;}
+input.annie.astronaut + label:before {background-position: -648px 0px;}
+input.annie.asylum + label:before {background-position: -36px 0px;}
+input.annie.ballerannie + label:before {background-position: -684px 0px;}
+input.annie.security + label:before {background-position: -432px 0px;}
+input.annie.changlorious + label:before {background-position: -864px 0px;}
+input.annie.cheerleader + label:before {background-position: -1008px 0px;}
+input.annie.mafia + label:before {background-position: -1548px 0px;}
+input.annie.hurt + label:before {background-position: -1296px 0px;}
+input.annie.paint + label:before {background-position: -1584px 0px;}
+input.annie.debate + label:before {background-position: -1044px 0px;}
+input.annie.dorothy + label:before {background-position: -828px 0px;}
+input.annie.hanniebal + label:before {background-position: -1656px 0px;}
+input.annie.reddress + label:before {background-position: -1368px 0px;}
+input.annie.befine + label:before {background-position: -144px 0px;}
+input.annie.geneva + label:before {background-position: -180px 0px;}
+input.annie.german + label:before {background-position: -1512px 0px;}
+input.annie.baby + label:before {background-position: -1260px 0px;}
+input.annie.poplock + label:before {background-position: -1080px 0px;}
+input.annie.hector + label:before {background-position: -1188px 0px;}
+input.annie.hectorlvlup + label:before {background-position: -1692px 0px;}
+input.annie.honey + label:before {background-position: -936px 0px;}
+input.annie.hooded + label:before {background-position: -1764px 0px;}
+input.annie.hospital + label:before {background-position: -612px 0px;}
+input.annie.karatannie + label:before {background-position: -720px 0px;}
+input.annie.lawyer + label:before {background-position: -1440px 0px;}
+input.annie.highschool + label:before {background-position: -1620px 0px;}
+input.annie.riding + label:before {background-position: -360px 0px;}
+input.annie.lingerie + label:before {background-position: -1152px 0px;}
+input.annie.warfare + label:before {background-position: -468px 0px;}
+input.annie.nurse + label:before {background-position: -324px 0px;}
+input.annie.pageant + label:before {background-position: -1332px 0px;}
+input.annie.princess + label:before {background-position: -756px 0px;}
+input.annie.reindeer + label:before {background-position: -792px 0px;}
+input.annie.samara + label:before {background-position: -1476px 0px;}
+input.annie.script + label:before {background-position: -1224px 0px;}
+input.annie.santa + label:before {background-position: -396px 0px;}
+input.annie.party + label:before {background-position: -972px 0px;}
+input.annie.skeleton + label:before {background-position: -576px 0px;}
+input.annie.tightship + label:before {background-position: -1728px 0px;}
+input.annie.timebattle + label:before {background-position: -1116px 0px;}
+input.annie.victorian + label:before {background-position: -216px 0px;}
+input.annie.werewolf + label:before {background-position: -504px 0px;}
+input.annie.western + label:before {background-position: -1404px 0px;}
+input.annie.wig + label:before {background-position: -900px 0px;}
+input.annie.zombie + label:before {background-position: -540px 0px;}
+
+input.britta.base + label:before {background-position: -0px 0px;}
+input.britta.astronaut + label:before {background-position: -36px 0px;}
+input.britta.asylum + label:before {background-position: -72px 0px;}
+input.britta.bitten + label:before {background-position: -108px 0px;}
+input.britta.bloodied + label:before {background-position: -720px 0px;}
+input.britta.brittabot + label:before {background-position: -144px 0px;}
+input.britta.dragon + label:before {background-position: -180px 0px;}
+input.britta.buzzkill + label:before {background-position: -1404px 0px;}
+input.britta.cheerleader + label:before {background-position: -828px 0px;}
+input.britta.mafia + label:before {background-position: -1224px 0px;}
+input.britta.hurt + label:before {background-position: -1044px 0px;}
+input.britta.coldturkey + label:before {background-position: -972px 0px;}
+input.britta.dancer + label:before {background-position: -1152px 0px;}
+input.britta.dark + label:before {background-position: -216px 0px;}
+input.britta.doctor + label:before {background-position: -792px 0px;}
+input.britta.fibrosis + label:before {background-position: -1440px 0px;}
+input.britta.finallybefine + label:before {background-position: -756px 0px;}
+input.britta.german + label:before {background-position: -252px 0px;}
+input.britta.ham + label:before {background-position: -1332px 0px;}
+input.britta.popnlock + label:before {background-position: -864px 0px;}
+input.britta.fundraising + label:before {background-position: -1008px 0px;}
+input.britta.cool + label:before {background-position: -288px 0px;}
+input.britta.lavaworld + label:before {background-position: -1368px 0px;}
+input.britta.lavernica + label:before {background-position: -936px 0px;}
+input.britta.lingerie + label:before {background-position: -1116px 0px;}
+input.britta.king + label:before {background-position: -324px 0px;}
+input.britta.mia + label:before {background-position: -684px 0px;}
+input.britta.mj + label:before {background-position: -1188px 0px;}
+input.britta.paintball + label:before {background-position: -360px 0px;}
+input.britta.dino + label:before {background-position: -396px 0px;}
+input.britta.tree + label:before {background-position: -432px 0px;}
+input.britta.spades + label:before {background-position: -648px 0px;}
+input.britta.peyote + label:before {background-position: -468px 0px;}
+input.britta.psychopath + label:before {background-position: -612px 0px;}
+input.britta.punk + label:before {background-position: -1080px 0px;}
+input.britta.squirrel + label:before {background-position: -504px 0px;}
+input.britta.teapot + label:before {background-position: -540px 0px;}
+input.britta.timelinebattle + label:before {background-position: -900px 0px;}
+input.britta.trannyqueen + label:before {background-position: -1260px 0px;}
+input.britta.protest + label:before {background-position: -1296px 0px;}
+input.britta.zombie + label:before {background-position: -576px 0px;}
+
+input.buddy.base + label:before {background-position: 0px 0px;}
+input.buddy.master_exploder + label:before {background-position: -36px 0px;}
+
+input.chang.base + label:before {background-position: -0px 0px;}
+input.chang.brutalitops + label:before {background-position: -36px 0px;}
+input.chang.butch + label:before {background-position: -216px 0px;}
+input.chang.cheerleader + label:before {background-position: -252px 0px;}
+input.chang.dictator + label:before {background-position: -72px 0px;}
+input.chang.dingleberry + label:before {background-position: -720px 0px;}
+input.chang.evil + label:before {background-position: -108px 0px;}
+input.chang.father + label:before {background-position: -144px 0px;}
+input.chang.popnlock + label:before {background-position: -576px 0px;}
+input.chang.cannotdie + label:before {background-position: -360px 0px;}
+input.chang.naked + label:before {background-position: -684px 0px;}
+input.chang.leather + label:before {background-position: -612px 0px;}
+input.chang.peggy + label:before {background-position: -288px 0px;}
+input.chang.ymca + label:before {background-position: -432px 0px;}
+input.chang.safety + label:before {background-position: -180px 0px;}
+input.chang.shaving + label:before {background-position: -540px 0px;}
+input.chang.soccer + label:before {background-position: -648px 0px;}
+input.chang.snowman + label:before {background-position: -468px 0px;}
+input.chang.enterchangment + label:before {background-position: -396px 0px;}
+input.chang.understudy + label:before {background-position: -504px 0px;}
+input.chang.zombie + label:before {background-position: -324px 0px;}
+
+input.dean.base + label:before {background-position: -0px 0px;}
+input.dean.bee + label:before {background-position: -252px 0px;}
+input.dean.construction + label:before {background-position: -216px 0px;}
+input.dean.devil + label:before {background-position: -36px 0px;}
+input.dean.donna + label:before {background-position: -324px 0px;}
+input.dean.cowboy + label:before {background-position: -144px 0px;}
+input.dean.jgdiehard + label:before {background-position: -360px 0px;}
+input.dean.mardigras + label:before {background-position: -72px 0px;}
+input.dean.newdean + label:before {background-position: -180px 0px;}
+input.dean.conductor + label:before {background-position: -288px 0px;}
+input.dean.unclesam + label:before {background-position: -108px 0px;}
+
+input.duncan.base + label:before {background-position: 0px 0px;}
+
+input.fatneil.base + label:before {background-position: 0px 0px;}
+input.fatneil.coach + label:before {background-position: -36px 0px;}
+input.fatneil.duquense + label:before {background-position: -72px 0px;}
+
+input.garrett.base + label:before {background-position: 0px 0px;}
+input.garrett.jammies + label:before {background-position: -36px 0px;}
+input.garrett.alien + label:before {background-position: -72px 0px;}
+
+input.gilbert.base + label:before {background-position: 0px 0px;}
+
+input.guzman.base + label:before {background-position: 0px 0px;}
+
+input.jeff.base + label:before {background-position: -0px 0px;}
+input.jeff.astronaut + label:before {background-position: -36px 0px;}
+input.jeff.asylum + label:before {background-position: -72px 0px;}
+input.jeff.aviators + label:before {background-position: -108px 0px;}
+input.jeff.bball + label:before {background-position: -792px 0px;}
+input.jeff.naked + label:before {background-position: -144px 0px;}
+input.jeff.boxer + label:before {background-position: -1548px 0px;}
+input.jeff.carpediem + label:before {background-position: -936px 0px;}
+input.jeff.hurt + label:before {background-position: -1368px 0px;}
+input.jeff.darkest + label:before {background-position: -1440px 0px;}
+input.jeff.david + label:before {background-position: -180px 0px;}
+input.jeff.dean + label:before {background-position: -828px 0px;}
+input.jeff.doctor + label:before {background-position: -1152px 0px;}
+input.jeff.drunk + label:before {background-position: -1404px 0px;}
+input.jeff.electro + label:before {background-position: -216px 0px;}
+input.jeff.darkundies + label:before {background-position: -1332px 0px;}
+input.jeff.fbf + label:before {background-position: -972px 0px;}
+input.jeff.goldblum + label:before {background-position: -252px 0px;}
+input.jeff.baby + label:before {background-position: -1008px 0px;}
+input.jeff.hawkeye + label:before {background-position: -1116px 0px;}
+input.jeff.poplock + label:before {background-position: -288px 0px;}
+input.jeff.hungerdeans + label:before {background-position: -1728px 0px;}
+input.jeff.jeffinthebox + label:before {background-position: -1512px 0px;}
+input.jeff.spades + label:before {background-position: -324px 0px;}
+input.jeff.cool + label:before {background-position: -360px 0px;}
+input.jeff.app + label:before {background-position: -1764px 0px;}
+input.jeff.mar + label:before {background-position: -1080px 0px;}
+input.jeff.straightjacket + label:before {background-position: -396px 0px;}
+input.jeff.warfare + label:before {background-position: -900px 0px;}
+input.jeff.mohawk + label:before {background-position: -432px 0px;}
+input.jeff.monkeygas + label:before {background-position: -468px 0px;}
+input.jeff.plaid + label:before {background-position: -1584px 0px;}
+input.jeff.planet + label:before {background-position: -1260px 0px;}
+input.jeff.professor + label:before {background-position: -1620px 0px;}
+input.jeff.skater + label:before {background-position: -1476px 0px;}
+input.jeff.ricky + label:before {background-position: -1044px 0px;}
+input.jeff.hulk + label:before {background-position: -504px 0px;}
+input.jeff.cowboy + label:before {background-position: -576px 0px;}
+input.jeff.shorts + label:before {background-position: -540px 0px;}
+input.jeff.riggs + label:before {background-position: -1656px 0px;}
+input.jeff.abeds_shirt + label:before {background-position: -612px 0px;}
+input.jeff.thoraxis + label:before {background-position: -648px 0px;}
+input.jeff.timeline + label:before {background-position: -1224px 0px;}
+input.jeff.anime + label:before {background-position: -684px 0px;}
+input.jeff.train + label:before {background-position: -1188px 0px;}
+input.jeff.undies + label:before {background-position: -1296px 0px;}
+input.jeff.vampire + label:before {background-position: -756px 0px;}
+input.jeff.vega + label:before {background-position: -864px 0px;}
+input.jeff.wingman + label:before {background-position: -1692px 0px;}
+input.jeff.zombie + label:before {background-position: -720px 0px;}
+
+input.leonard.base + label:before {background-position: 0px 0px;}
+input.leonard.asylum + label:before {background-position: -36px 0px;}
+input.leonard.paintball + label:before {background-position: -72px 0px;}
+
+input.pierce.base + label:before {background-position: -0px 0px;}
+input.pierce.astronaut + label:before {background-position: -36px 0px;}
+input.pierce.beastmaster + label:before {background-position: -900px 0px;}
+input.pierce.naked + label:before {background-position: -72px 0px;}
+input.pierce.canoe + label:before {background-position: -108px 0px;}
+input.pierce.kirk + label:before {background-position: -144px 0px;}
+input.pierce.captain + label:before {background-position: -648px 0px;}
+input.pierce.hurt + label:before {background-position: -720px 0px;}
+input.pierce.wizard + label:before {background-position: -684px 0px;}
+input.pierce.drugs + label:before {background-position: -180px 0px;}
+input.pierce.fatreynolds + label:before {background-position: -972px 0px;}
+input.pierce.feethands + label:before {background-position: -864px 0px;}
+input.pierce.gimp + label:before {background-position: -216px 0px;}
+input.pierce.popnlock + label:before {background-position: -936px 0px;}
+input.pierce.hotdog + label:before {background-position: -252px 0px;}
+input.pierce.hulapaint + label:before {background-position: -288px 0px;}
+input.pierce.janetreno + label:before {background-position: -324px 0px;}
+input.pierce.lotus + label:before {background-position: -360px 0px;}
+input.pierce.madscientist + label:before {background-position: -828px 0px;}
+input.pierce.magnum + label:before {background-position: -396px 0px;}
+input.pierce.paintball + label:before {background-position: -432px 0px;}
+input.pierce.dickish + label:before {background-position: -756px 0px;}
+input.pierce.pillow + label:before {background-position: -468px 0px;}
+input.pierce.planet_christmas + label:before {background-position: -504px 0px;}
+input.pierce.teddy + label:before {background-position: -612px 0px;}
+input.pierce.western + label:before {background-position: -792px 0px;}
+input.pierce.wheelchair + label:before {background-position: -540px 0px;}
+input.pierce.zombie + label:before {background-position: -576px 0px;}
+
+input.rich.base + label:before {background-position: 0px 0px;}
+
+input.shirley.base + label:before {background-position: -0px 0px;}
+input.shirley.clubs + label:before {background-position: -36px 0px;}
+input.shirley.angel + label:before {background-position: -360px 0px;}
+input.shirley.space + label:before {background-position: -468px 0px;}
+input.shirley.babydoll + label:before {background-position: -432px 0px;}
+input.shirley.anime + label:before {background-position: -72px 0px;}
+input.shirley.book + label:before {background-position: -900px 0px;}
+input.shirley.security + label:before {background-position: -756px 0px;}
+input.shirley.captain + label:before {background-position: -648px 0px;}
+input.shirley.chef + label:before {background-position: -108px 0px;}
+input.shirley.hurt + label:before {background-position: -684px 0px;}
+input.shirley.crayon + label:before {background-position: -144px 0px;}
+input.shirley.dark + label:before {background-position: -180px 0px;}
+input.shirley.fbf + label:before {background-position: -792px 0px;}
+input.shirley.baby + label:before {background-position: -540px 0px;}
+input.shirley.potter + label:before {background-position: -216px 0px;}
+input.shirley.headnurse + label:before {background-position: -972px 0px;}
+input.shirley.poplock + label:before {background-position: -828px 0px;}
+input.shirley.jules + label:before {background-position: -720px 0px;}
+input.shirley.lingerie + label:before {background-position: -864px 0px;}
+input.shirley.glinda + label:before {background-position: -252px 0px;}
+input.shirley.oprah + label:before {background-position: -504px 0px;}
+input.shirley.planetchristmas + label:before {background-position: -936px 0px;}
+input.shirley.leia + label:before {background-position: -288px 0px;}
+input.shirley.sandwiches + label:before {background-position: -612px 0px;}
+input.shirley.timelinebattle + label:before {background-position: -576px 0px;}
+input.shirley.zippy + label:before {background-position: -396px 0px;}
+input.shirley.zombie + label:before {background-position: -324px 0px;}
+
+input.troy.base + label:before {background-position: -0px 0px;}
+input.troy.ac + label:before {background-position: -972px 0px;}
+input.troy.atv + label:before {background-position: -1728px 0px;}
+input.troy.bball + label:before {background-position: -1152px 0px;}
+input.troy.beatitudes + label:before {background-position: -1332px 0px;}
+input.troy.bingbong + label:before {background-position: -36px 0px;}
+input.troy.bumblebee + label:before {background-position: -72px 0px;}
+input.troy.gambino + label:before {background-position: -108px 0px;}
+input.troy.mafia + label:before {background-position: -1188px 0px;}
+input.troy.hurt + label:before {background-position: -1548px 0px;}
+input.troy.christmas_tree + label:before {background-position: -144px 0px;}
+input.troy.chronicles + label:before {background-position: -1764px 0px;}
+input.troy.constable + label:before {background-position: -180px 0px;}
+input.troy.cowboy + label:before {background-position: -1836px 0px;}
+input.troy.dancer + label:before {background-position: -720px 0px;}
+input.troy.detective + label:before {background-position: -216px 0px;}
+input.troy.doctor + label:before {background-position: -1368px 0px;}
+input.troy.eddie + label:before {background-position: -1692px 0px;}
+input.troy.evil + label:before {background-position: -900px 0px;}
+input.troy.fiddla + label:before {background-position: -792px 0px;}
+input.troy.fbf + label:before {background-position: -828px 0px;}
+input.troy.baby + label:before {background-position: -936px 0px;}
+input.troy.popnlock + label:before {background-position: -1296px 0px;}
+input.troy.hippie + label:before {background-position: -1584px 0px;}
+input.troy.hobbes + label:before {background-position: -252px 0px;}
+input.troy.invader + label:before {background-position: -1224px 0px;}
+input.troy.morning + label:before {background-position: -1476px 0px;}
+input.troy.kick + label:before {background-position: -288px 0px;}
+input.troy.clubs + label:before {background-position: -1620px 0px;}
+input.troy.lotus + label:before {background-position: -1908px 0px;}
+input.troy.letterman + label:before {background-position: -1008px 0px;}
+input.troy.library + label:before {background-position: -324px 0px;}
+input.troy.michaeljackson + label:before {background-position: -360px 0px;}
+input.troy.mustache + label:before {background-position: -1440px 0px;}
+input.troy.chloroform + label:before {background-position: -1044px 0px;}
+input.troy.naked + label:before {background-position: -1872px 0px;}
+input.troy.night + label:before {background-position: -396px 0px;}
+input.troy.operation + label:before {background-position: -1260px 0px;}
+input.troy.orange + label:before {background-position: -432px 0px;}
+input.troy.paintball + label:before {background-position: -504px 0px;}
+input.troy.pajamas + label:before {background-position: -1404px 0px;}
+input.troy.pantsuit + label:before {background-position: -468px 0px;}
+input.troy.pharaoh + label:before {background-position: -1512px 0px;}
+input.troy.pumpkin + label:before {background-position: -864px 0px;}
+input.troy.ridley + label:before {background-position: -540px 0px;}
+input.troy.sexyvampire + label:before {background-position: -576px 0px;}
+input.troy.spidey + label:before {background-position: -612px 0px;}
+input.troy.football + label:before {background-position: -648px 0px;}
+input.troy.toga + label:before {background-position: -1116px 0px;}
+input.troy.sewn + label:before {background-position: -684px 0px;}
+input.troy.troysoldier + label:before {background-position: -1800px 0px;}
+input.troy.werewolf + label:before {background-position: -756px 0px;}
+input.troy.woodsman + label:before {background-position: -1080px 0px;}
+input.troy.zombie + label:before {background-position: -1656px 0px;}
+
+input.vaughn.base + label:before {background-position: 0px 0px;}
+
+input.vicedean.base + label:before {background-position: 0px 0px;}
+input.vicedean.ghost + label:before {background-position: -36px 0px;}
+input.vicedean.stuff + label:before {background-position: -108px 0px;}
+input.vicedean.pajamas + label:before {background-position: -72px 0px;}
+
+input.vicki.base + label:before {background-position: 0px 0px;}
+input.vicki.knight + label:before {background-position: -36px 0px;}
+
+@keyframes dance {
+  0% {background-position: -768px -1728px;}
+  25% {background-position: -2304px -1344px;}
+  50% {background-position: -2304px -1536px;}
+  75% {background-position: -768px -1920px;}
+  100% {background-position: -1536px -1152px;}
+}
+
+div.character {
+  position: absolute;
+  width: 192px;
+  height: 192px;
+  image-rendering: pixelated;
+  background-size: 2304px;
+  margin: 220px 0 0 50%;
+  top: 0;
+  left: -96px;
+  animation: dance 1s steps(1) infinite;
+}
+
+input.abed.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/base.png);}
+input.abed.alien:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/alien.png);}
+input.abed.batman:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/batman.png);}
+input.abed.bert:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/bert.png);}
+input.abed.britta:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/britta.png);}
+input.abed.jamielee:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/jamielee.png);}
+input.abed.bee:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/bee.png);}
+input.abed.camo:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/camo.png);}
+input.abed.cape:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/cape.png);}
+input.abed.chang:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/chang.png);}
+input.abed.mafia:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/mafia.png);}
+input.abed.hurt:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/hurt.png);}
+input.abed.elf:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/elf.png);}
+input.abed.christmas:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/christmas.png);}
+input.abed.paint:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/paint.png);}
+input.abed.cowboy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/cowboy.png);}
+input.abed.creepy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/creepy.png);}
+input.abed.rasalghul:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/rasalghul.png);}
+input.abed.andre:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/andre.png);}
+input.abed.disco:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/disco.png);}
+input.abed.drunk:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/drunk.png);}
+input.abed.maiden:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/maiden.png);}
+input.abed.evil:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/evil.png);}
+input.abed.fine:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/fine.png);}
+input.abed.gangster:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/gangster.png);}
+input.abed.baby:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/baby.png);}
+input.abed.solo:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/solo.png);}
+input.abed.poplock:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/poplock.png);}
+input.abed.hobgoblin:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/hobgoblin.png);}
+input.abed.morning:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/morning.png);}
+input.abed.inspector:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/inspector.png);}
+input.abed.clubs:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/clubs.png);}
+input.abed.jbv:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/jbv.png);}
+input.abed.jeff:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/jeff.png);}
+input.abed.jeffshirt:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/jeffshirt.png);}
+input.abed.white:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/white.png);}
+input.abed.mcclane:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/mcclane.png);}
+input.abed.kyle:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/kyle.png);}
+input.abed.king:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/king.png);}
+input.abed.naked:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/naked.png);}
+input.abed.pierce:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/pierce.png);}
+input.abed.radar:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/radar.png);}
+input.abed.plumber:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/plumber.png);}
+input.abed.patrick:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/patrick.png);}
+input.abed.sewn:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/sewn.png);}
+input.abed.troy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/troy.png);}
+input.abed.zombie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/abed/zombie.png);}
+
+input.annie.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/base.png);}
+input.annie.abed:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/abed.png);}
+input.annie.hearts:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/hearts.png);}
+input.annie.kim:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/kim.png);}
+input.annie.armor:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/armor.png);}
+input.annie.astronaut:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/astronaut.png);}
+input.annie.asylum:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/asylum.png);}
+input.annie.ballerannie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/ballerannie.png);}
+input.annie.security:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/security.png);}
+input.annie.changlorious:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/changlorious.png);}
+input.annie.cheerleader:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/cheerleader.png);}
+input.annie.mafia:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/mafia.png);}
+input.annie.hurt:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/hurt.png);}
+input.annie.paint:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/paint.png);}
+input.annie.debate:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/debate.png);}
+input.annie.dorothy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/dorothy.png);}
+input.annie.hanniebal:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/hanniebal.png);}
+input.annie.reddress:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/reddress.png);}
+input.annie.befine:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/befine.png);}
+input.annie.geneva:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/geneva.png);}
+input.annie.german:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/german.png);}
+input.annie.baby:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/baby.png);}
+input.annie.poplock:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/poplock.png);}
+input.annie.hector:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/hector.png);}
+input.annie.hectorlvlup:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/hectorlvlup.png);}
+input.annie.honey:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/honey.png);}
+input.annie.hooded:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/hooded.png);}
+input.annie.hospital:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/hospital.png);}
+input.annie.karatannie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/karatannie.png);}
+input.annie.lawyer:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/lawyer.png);}
+input.annie.highschool:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/highschool.png);}
+input.annie.riding:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/riding.png);}
+input.annie.lingerie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/lingerie.png);}
+input.annie.warfare:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/warfare.png);}
+input.annie.nurse:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/nurse.png);}
+input.annie.pageant:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/pageant.png);}
+input.annie.princess:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/princess.png);}
+input.annie.reindeer:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/reindeer.png);}
+input.annie.samara:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/samara.png);}
+input.annie.script:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/script.png);}
+input.annie.santa:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/santa.png);}
+input.annie.party:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/party.png);}
+input.annie.skeleton:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/skeleton.png);}
+input.annie.tightship:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/tightship.png);}
+input.annie.timebattle:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/timebattle.png);}
+input.annie.victorian:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/victorian.png);}
+input.annie.werewolf:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/werewolf.png);}
+input.annie.western:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/western.png);}
+input.annie.wig:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/wig.png);}
+input.annie.zombie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/annie/zombie.png);}
+
+input.britta.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/base.png);}
+input.britta.astronaut:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/astronaut.png);}
+input.britta.asylum:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/asylum.png);}
+input.britta.bitten:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/bitten.png);}
+input.britta.bloodied:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/bloodied.png);}
+input.britta.brittabot:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/brittabot.png);}
+input.britta.dragon:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/dragon.png);}
+input.britta.buzzkill:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/buzzkill.png);}
+input.britta.cheerleader:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/cheerleader.png);}
+input.britta.mafia:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/mafia.png);}
+input.britta.hurt:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/hurt.png);}
+input.britta.coldturkey:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/coldturkey.png);}
+input.britta.dancer:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/dancer.png);}
+input.britta.dark:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/dark.png);}
+input.britta.doctor:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/doctor.png);}
+input.britta.fibrosis:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/fibrosis.png);}
+input.britta.finallybefine:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/finallybefine.png);}
+input.britta.german:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/german.png);}
+input.britta.ham:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/ham.png);}
+input.britta.popnlock:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/popnlock.png);}
+input.britta.fundraising:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/fundraising.png);}
+input.britta.cool:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/cool.png);}
+input.britta.lavaworld:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/lavaworld.png);}
+input.britta.lavernica:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/lavernica.png);}
+input.britta.lingerie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/lingerie.png);}
+input.britta.king:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/king.png);}
+input.britta.mia:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/mia.png);}
+input.britta.mj:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/mj.png);}
+input.britta.paintball:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/paintball.png);}
+input.britta.dino:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/dino.png);}
+input.britta.tree:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/tree.png);}
+input.britta.spades:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/spades.png);}
+input.britta.peyote:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/peyote.png);}
+input.britta.psychopath:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/psychopath.png);}
+input.britta.punk:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/punk.png);}
+input.britta.squirrel:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/squirrel.png);}
+input.britta.teapot:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/teapot.png);}
+input.britta.timelinebattle:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/timelinebattle.png);}
+input.britta.trannyqueen:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/trannyqueen.png);}
+input.britta.protest:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/protest.png);}
+input.britta.zombie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/britta/zombie.png);}
+
+input.buddy.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/buddy/base.png);}
+input.buddy.master_exploder:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/buddy/master_exploder.png);}
+
+input.chang.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/base.png);}
+input.chang.brutalitops:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/brutalitops.png);}
+input.chang.butch:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/butch.png);}
+input.chang.cheerleader:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/cheerleader.png);}
+input.chang.dictator:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/dictator.png);}
+input.chang.dingleberry:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/dingleberry.png);}
+input.chang.evil:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/evil.png);}
+input.chang.father:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/father.png);}
+input.chang.popnlock:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/popnlock.png);}
+input.chang.cannotdie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/cannotdie.png);}
+input.chang.naked:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/naked.png);}
+input.chang.leather:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/leather.png);}
+input.chang.peggy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/peggy.png);}
+input.chang.ymca:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/ymca.png);}
+input.chang.safety:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/safety.png);}
+input.chang.shaving:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/shaving.png);}
+input.chang.soccer:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/soccer.png);}
+input.chang.snowman:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/snowman.png);}
+input.chang.enterchangment:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/enterchangment.png);}
+input.chang.understudy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/understudy.png);}
+input.chang.zombie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/zombie.png);}
+
+input.dean.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/base.png);}
+input.dean.bee:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/bee.png);}
+input.dean.construction:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/construction.png);}
+input.dean.devil:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/devil.png);}
+input.dean.donna:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/donna.png);}
+input.dean.cowboy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/cowboy.png);}
+input.dean.jgdiehard:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/jgdiehard.png);}
+input.dean.mardigras:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/mardigras.png);}
+input.dean.newdean:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/newdean.png);}
+input.dean.conductor:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/conductor.png);}
+input.dean.unclesam:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/unclesam.png);}
+
+input.duncan.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/duncan/base.png);}
+
+input.fatneil.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/fatneil/base.png);}
+input.fatneil.coach:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/fatneil/coach.png);}
+input.fatneil.duquense:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/fatneil/duquense.png);}
+
+input.garrett.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/garrett/base.png);}
+input.garrett.jammies:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/garrett/jammies.png);}
+input.garrett.alien:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/garrett/alien.png);}
+
+input.gilbert.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/gilbert/base.png);}
+
+input.guzman.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/guzman/base.png);}
+
+input.jeff.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/base.png);}
+input.jeff.astronaut:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/astronaut.png);}
+input.jeff.asylum:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/asylum.png);}
+input.jeff.aviators:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/aviators.png);}
+input.jeff.bball:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/bball.png);}
+input.jeff.naked:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/naked.png);}
+input.jeff.boxer:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/boxer.png);}
+input.jeff.carpediem:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/carpediem.png);}
+input.jeff.hurt:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/hurt.png);}
+input.jeff.darkest:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/darkest.png);}
+input.jeff.david:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/david.png);}
+input.jeff.dean:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/dean.png);}
+input.jeff.doctor:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/doctor.png);}
+input.jeff.drunk:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/drunk.png);}
+input.jeff.electro:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/electro.png);}
+input.jeff.darkundies:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/darkundies.png);}
+input.jeff.fbf:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/fbf.png);}
+input.jeff.goldblum:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/goldblum.png);}
+input.jeff.baby:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/baby.png);}
+input.jeff.hawkeye:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/hawkeye.png);}
+input.jeff.poplock:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/poplock.png);}
+input.jeff.hungerdeans:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/hungerdeans.png);}
+input.jeff.jeffinthebox:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/jeffinthebox.png);}
+input.jeff.spades:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/spades.png);}
+input.jeff.cool:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/cool.png);}
+input.jeff.app:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/app.png);}
+input.jeff.mar:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/mar.png);}
+input.jeff.straightjacket:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/straightjacket.png);}
+input.jeff.warfare:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/warfare.png);}
+input.jeff.mohawk:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/mohawk.png);}
+input.jeff.monkeygas:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/monkeygas.png);}
+input.jeff.plaid:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/plaid.png);}
+input.jeff.planet:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/planet.png);}
+input.jeff.professor:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/professor.png);}
+input.jeff.skater:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/skater.png);}
+input.jeff.ricky:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/ricky.png);}
+input.jeff.hulk:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/hulk.png);}
+input.jeff.cowboy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/cowboy.png);}
+input.jeff.shorts:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/shorts.png);}
+input.jeff.riggs:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/riggs.png);}
+input.jeff.abeds_shirt:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/abeds_shirt.png);}
+input.jeff.thoraxis:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/thoraxis.png);}
+input.jeff.timeline:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/timeline.png);}
+input.jeff.anime:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/anime.png);}
+input.jeff.train:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/train.png);}
+input.jeff.undies:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/undies.png);}
+input.jeff.vampire:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/vampire.png);}
+input.jeff.vega:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/vega.png);}
+input.jeff.wingman:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/wingman.png);}
+input.jeff.zombie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/zombie.png);}
+
+input.leonard.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/leonard/base.png);}
+input.leonard.asylum:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/leonard/asylum.png);}
+input.leonard.paintball:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/leonard/paintball.png);}
+
+input.pierce.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/base.png);}
+input.pierce.astronaut:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/astronaut.png);}
+input.pierce.beastmaster:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/beastmaster.png);}
+input.pierce.naked:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/naked.png);}
+input.pierce.canoe:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/canoe.png);}
+input.pierce.kirk:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/kirk.png);}
+input.pierce.captain:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/captain.png);}
+input.pierce.hurt:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/hurt.png);}
+input.pierce.wizard:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/wizard.png);}
+input.pierce.drugs:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/drugs.png);}
+input.pierce.fatreynolds:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/fatreynolds.png);}
+input.pierce.feethands:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/feethands.png);}
+input.pierce.gimp:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/gimp.png);}
+input.pierce.popnlock:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/popnlock.png);}
+input.pierce.hotdog:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/hotdog.png);}
+input.pierce.hulapaint:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/hulapaint.png);}
+input.pierce.janetreno:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/janetreno.png);}
+input.pierce.lotus:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/lotus.png);}
+input.pierce.madscientist:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/madscientist.png);}
+input.pierce.magnum:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/magnum.png);}
+input.pierce.paintball:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/paintball.png);}
+input.pierce.dickish:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/dickish.png);}
+input.pierce.pillow:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/pillow.png);}
+input.pierce.planet_christmas:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/planet_christmas.png);}
+input.pierce.teddy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/teddy.png);}
+input.pierce.western:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/western.png);}
+input.pierce.wheelchair:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/wheelchair.png);}
+input.pierce.zombie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/zombie.png);}
+
+input.rich.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/rich/base.png);}
+
+input.shirley.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/base.png);}
+input.shirley.clubs:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/clubs.png);}
+input.shirley.angel:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/angel.png);}
+input.shirley.space:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/space.png);}
+input.shirley.babydoll:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/babydoll.png);}
+input.shirley.anime:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/anime.png);}
+input.shirley.book:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/book.png);}
+input.shirley.security:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/security.png);}
+input.shirley.captain:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/captain.png);}
+input.shirley.chef:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/chef.png);}
+input.shirley.hurt:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/hurt.png);}
+input.shirley.crayon:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/crayon.png);}
+input.shirley.dark:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/dark.png);}
+input.shirley.fbf:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/fbf.png);}
+input.shirley.baby:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/baby.png);}
+input.shirley.potter:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/potter.png);}
+input.shirley.headnurse:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/headnurse.png);}
+input.shirley.poplock:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/poplock.png);}
+input.shirley.jules:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/jules.png);}
+input.shirley.lingerie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/lingerie.png);}
+input.shirley.glinda:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/glinda.png);}
+input.shirley.oprah:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/oprah.png);}
+input.shirley.planetchristmas:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/planetchristmas.png);}
+input.shirley.leia:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/leia.png);}
+input.shirley.sandwiches:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/sandwiches.png);}
+input.shirley.timelinebattle:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/timelinebattle.png);}
+input.shirley.zippy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/zippy.png);}
+input.shirley.zombie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/zombie.png);}
+
+input.troy.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/base.png);}
+input.troy.ac:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/ac.png);}
+input.troy.atv:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/atv.png);}
+input.troy.bball:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/bball.png);}
+input.troy.beatitudes:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/beatitudes.png);}
+input.troy.bingbong:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/bingbong.png);}
+input.troy.bumblebee:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/bumblebee.png);}
+input.troy.gambino:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/gambino.png);}
+input.troy.mafia:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/mafia.png);}
+input.troy.hurt:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/hurt.png);}
+input.troy.christmas_tree:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/christmas_tree.png);}
+input.troy.chronicles:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/chronicles.png);}
+input.troy.constable:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/constable.png);}
+input.troy.cowboy:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/cowboy.png);}
+input.troy.dancer:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/dancer.png);}
+input.troy.detective:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/detective.png);}
+input.troy.doctor:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/doctor.png);}
+input.troy.eddie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/eddie.png);}
+input.troy.evil:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/evil.png);}
+input.troy.fiddla:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/fiddla.png);}
+input.troy.fbf:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/fbf.png);}
+input.troy.baby:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/baby.png);}
+input.troy.popnlock:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/popnlock.png);}
+input.troy.hippie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/hippie.png);}
+input.troy.hobbes:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/hobbes.png);}
+input.troy.invader:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/invader.png);}
+input.troy.morning:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/morning.png);}
+input.troy.kick:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/kick.png);}
+input.troy.clubs:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/clubs.png);}
+input.troy.lotus:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/lotus.png);}
+input.troy.letterman:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/letterman.png);}
+input.troy.library:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/library.png);}
+input.troy.michaeljackson:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/michaeljackson.png);}
+input.troy.mustache:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/mustache.png);}
+input.troy.chloroform:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/chloroform.png);}
+input.troy.naked:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/naked.png);}
+input.troy.night:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/night.png);}
+input.troy.operation:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/operation.png);}
+input.troy.orange:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/orange.png);}
+input.troy.paintball:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/paintball.png);}
+input.troy.pajamas:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/pajamas.png);}
+input.troy.pantsuit:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/pantsuit.png);}
+input.troy.pharaoh:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/pharaoh.png);}
+input.troy.pumpkin:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/pumpkin.png);}
+input.troy.ridley:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/ridley.png);}
+input.troy.sexyvampire:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/sexyvampire.png);}
+input.troy.spidey:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/spidey.png);}
+input.troy.football:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/football.png);}
+input.troy.toga:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/toga.png);}
+input.troy.sewn:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/sewn.png);}
+input.troy.troysoldier:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/troysoldier.png);}
+input.troy.werewolf:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/werewolf.png);}
+input.troy.woodsman:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/woodsman.png);}
+input.troy.zombie:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/zombie.png);}
+
+input.vaughn.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vaughn/base.png);}
+
+input.vicedean.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicedean/base.png);}
+input.vicedean.ghost:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicedean/ghost.png);}
+input.vicedean.stuff:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicedean/stuff.png);}
+input.vicedean.pajamas:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicedean/pajamas.png);}
+
+input.vicki.base:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicki/base.png);}
+input.vicki.knight:checked ~ div.character {background-image:url(https://raw.githubusercontent.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicki/knight.png);}
+
+</style>
+<div class="character-wrapper">
+  <div class="select costume">
+    <h3>Abed Nadir</h3>
+    <input type="radio" checked id="costume_abed_base" name="costume" value="Abed Nadir (base)" class="abed base"><label for="costume_abed_base">Abed Nadir (base)</label>
+    <input type="radio" id="costume_abed_alien" name="costume" value="Alien (S02E06)" class="abed alien"><label for="costume_abed_alien">Alien (S02E06)</label>
+    <input type="radio" id="costume_abed_batman" name="costume" value="Batman (S01E07)" class="abed batman"><label for="costume_abed_batman">Batman (S01E07)</label>
+    <input type="radio" id="costume_abed_bert" name="costume" value="Bert (S01E17)" class="abed bert"><label for="costume_abed_bert">Bert (S01E17)</label>
+    <input type="radio" id="costume_abed_britta" name="costume" value="Britta Roleplay (S03E16)" class="abed britta"><label for="costume_abed_britta">Britta Roleplay (S03E16)</label>
+    <input type="radio" id="costume_abed_jamielee" name="costume" value="Brown Jamie Lee Curtis (S03E12)" class="abed jamielee"><label for="costume_abed_jamielee">Brown Jamie Lee Curtis (S03E12)</label>
+    <input type="radio" id="costume_abed_bee" name="costume" value="Bumblebee (S02E13)" class="abed bee"><label for="costume_abed_bee">Bumblebee (S02E13)</label>
+    <input type="radio" id="costume_abed_camo" name="costume" value="Camouflage (S01E23)" class="abed camo"><label for="costume_abed_camo">Camouflage (S01E23)</label>
+    <input type="radio" id="costume_abed_cape" name="costume" value="The Cape (S02E21)" class="abed cape"><label for="costume_abed_cape">The Cape (S02E21)</label>
+    <input type="radio" id="costume_abed_chang" name="costume" value="Chang Roleplay (S03E16)" class="abed chang"><label for="costume_abed_chang">Chang Roleplay (S03E16)</label>
+    <input type="radio" id="costume_abed_mafia" name="costume" value="Chicken Mafia (S01E18)" class="abed mafia"><label for="costume_abed_mafia">Chicken Mafia (S01E18)</label>
+    <input type="radio" id="costume_abed_hurt" name="costume" value="Christmas Brawl (S01E12)" class="abed hurt"><label for="costume_abed_hurt">Christmas Brawl (S01E12)</label>
+    <input type="radio" id="costume_abed_elf" name="costume" value="Christmas Elf (S01E12)" class="abed elf"><label for="costume_abed_elf">Christmas Elf (S01E12)</label>
+    <input type="radio" id="costume_abed_christmas" name="costume" value="Christmas Sweater (S03E10)" class="abed christmas"><label for="costume_abed_christmas">Christmas Sweater (S03E10)</label>
+    <input type="radio" id="costume_abed_paint" name="costume" value="Covered In Paint (S02E24)" class="abed paint"><label for="costume_abed_paint">Covered In Paint (S02E24)</label>
+    <input type="radio" id="costume_abed_cowboy" name="costume" value="Cowboy (S02E21)" class="abed cowboy"><label for="costume_abed_cowboy">Cowboy (S02E21)</label>
+    <input type="radio" id="costume_abed_creepy" name="costume" value="Creepy Alien (S01E05)" class="abed creepy"><label for="costume_abed_creepy">Creepy Alien (S01E05)</label>
+    <input type="radio" id="costume_abed_rasalghul" name="costume" value="Darkest Timeline (Ra's Al Ghul) (S04E13)" class="abed rasalghul"><label for="costume_abed_rasalghul">Darkest Timeline (Ra's Al Ghul) (S04E13)</label>
+    <input type="radio" id="costume_abed_andre" name="costume" value="Dinner With Andre (S02E19)" class="abed andre"><label for="costume_abed_andre">Dinner With Andre (S02E19)</label>
+    <input type="radio" id="costume_abed_disco" name="costume" value="Disco (S03E10)" class="abed disco"><label for="costume_abed_disco">Disco (S03E10)</label>
+    <input type="radio" id="costume_abed_drunk" name="costume" value="Drunk (S01E16)" class="abed drunk"><label for="costume_abed_drunk">Drunk (S01E16)</label>
+    <input type="radio" id="costume_abed_maiden" name="costume" value="Elf Maiden (S02E14)" class="abed maiden"><label for="costume_abed_maiden">Elf Maiden (S02E14)</label>
+    <input type="radio" id="costume_abed_evil" name="costume" value="Evil Abed (S03E22)" class="abed evil"><label for="costume_abed_evil">Evil Abed (S03E22)</label>
+    <input type="radio" id="costume_abed_fine" name="costume" value="Finally Be Fine (S03E01)" class="abed fine"><label for="costume_abed_fine">Finally Be Fine (S03E01)</label>
+    <input type="radio" id="costume_abed_gangster" name="costume" value="Gangster (S03E19)" class="abed gangster"><label for="costume_abed_gangster">Gangster (S03E19)</label>
+    <input type="radio" id="costume_abed_baby" name="costume" value="Greendale Baby (S04E01)" class="abed baby"><label for="costume_abed_baby">Greendale Baby (S04E01)</label>
+    <input type="radio" id="costume_abed_solo" name="costume" value="Han Solo (S02E24)" class="abed solo"><label for="costume_abed_solo">Han Solo (S02E24)</label>
+    <input type="radio" id="costume_abed_poplock" name="costume" value="Heather Popandlocklear (S02E02)" class="abed poplock"><label for="costume_abed_poplock">Heather Popandlocklear (S02E02)</label>
+    <input type="radio" id="costume_abed_hobgoblin" name="costume" value="Hobgoblin (S05E10)" class="abed hobgoblin"><label for="costume_abed_hobgoblin">Hobgoblin (S05E10)</label>
+    <input type="radio" id="costume_abed_morning" name="costume" value="In the Morning (S01E20)" class="abed morning"><label for="costume_abed_morning">In the Morning (S01E20)</label>
+    <input type="radio" id="costume_abed_inspector" name="costume" value="Inspector Spacetime (S03E05)" class="abed inspector"><label for="costume_abed_inspector">Inspector Spacetime (S03E05)</label>
+    <input type="radio" id="costume_abed_clubs" name="costume" value="Jack of Clubs (S02E23)" class="abed clubs"><label for="costume_abed_clubs">Jack of Clubs (S02E23)</label>
+    <input type="radio" id="costume_abed_jbv" name="costume" value="Jamaican Baseball Villan (S01E15)" class="abed jbv"><label for="costume_abed_jbv">Jamaican Baseball Villan (S01E15)</label>
+    <input type="radio" id="costume_abed_jeff" name="costume" value="Jeff Roleplay (S03E16)" class="abed jeff"><label for="costume_abed_jeff">Jeff Roleplay (S03E16)</label>
+    <input type="radio" id="costume_abed_jeffshirt" name="costume" value="Jeff's Shirt (S01E02)" class="abed jeffshirt"><label for="costume_abed_jeffshirt">Jeff's Shirt (S01E02)</label>
+    <input type="radio" id="costume_abed_white" name="costume" value="Joey (S01E17)" class="abed white"><label for="costume_abed_white">Joey (S01E17)</label>
+    <input type="radio" id="costume_abed_mcclane" name="costume" value="John McClane (S04E10)" class="abed mcclane"><label for="costume_abed_mcclane">John McClane (S04E10)</label>
+    <input type="radio" id="costume_abed_kyle" name="costume" value="Kyle the Gnome (S02E14)" class="abed kyle"><label for="costume_abed_kyle">Kyle the Gnome (S02E14)</label>
+    <input type="radio" id="costume_abed_king" name="costume" value="Mouse King (S03E10)" class="abed king"><label for="costume_abed_king">Mouse King (S03E10)</label>
+    <input type="radio" id="costume_abed_naked" name="costume" value="Naked (S03E20)" class="abed naked"><label for="costume_abed_naked">Naked (S03E20)</label>
+    <input type="radio" id="costume_abed_pierce" name="costume" value="Pierce Roleplay (S03E16)" class="abed pierce"><label for="costume_abed_pierce">Pierce Roleplay (S03E16)</label>
+    <input type="radio" id="costume_abed_radar" name="costume" value="Radar (S01E13)" class="abed radar"><label for="costume_abed_radar">Radar (S01E13)</label>
+    <input type="radio" id="costume_abed_plumber" name="costume" value="Rod the Plumber (S03E21)" class="abed plumber"><label for="costume_abed_plumber">Rod the Plumber (S03E21)</label>
+    <input type="radio" id="costume_abed_patrick" name="costume" value="St Patrick's Day (S02E21)" class="abed patrick"><label for="costume_abed_patrick">St Patrick's Day (S02E21)</label>
+    <input type="radio" id="costume_abed_sewn" name="costume" value="Troy and Abed Sewn Together (S03E05)" class="abed sewn"><label for="costume_abed_sewn">Troy and Abed Sewn Together (S03E05)</label>
+    <input type="radio" id="costume_abed_troy" name="costume" value="Troy Roleplay (S03E16)" class="abed troy"><label for="costume_abed_troy">Troy Roleplay (S03E16)</label>
+    <input type="radio" id="costume_abed_zombie" name="costume" value="Zombie (S02E06)" class="abed zombie"><label for="costume_abed_zombie">Zombie (S02E06)</label>
+    <h3>Annie Edison</h3>
+    <input type="radio" id="costume_annie_base" name="costume" value="Annie Edison (base)" class="annie base"><label for="costume_annie_base">Annie Edison (base)</label>
+    <input type="radio" id="costume_annie_abed" name="costume" value="Abed (S03E16)" class="annie abed"><label for="costume_annie_abed">Abed (S03E16)</label>
+    <input type="radio" id="costume_annie_hearts" name="costume" value="Ace of Hearts (S02E23)" class="annie hearts"><label for="costume_annie_hearts">Ace of Hearts (S02E23)</label>
+    <input type="radio" id="costume_annie_kim" name="costume" value="Annie Kim (S03E02)" class="annie kim"><label for="costume_annie_kim">Annie Kim (S03E02)</label>
+    <input type="radio" id="costume_annie_armor" name="costume" value="Armor (S03E20)" class="annie armor"><label for="costume_annie_armor">Armor (S03E20)</label>
+    <input type="radio" id="costume_annie_astronaut" name="costume" value="Astronaut (S02E04)" class="annie astronaut"><label for="costume_annie_astronaut">Astronaut (S02E04)</label>
+    <input type="radio" id="costume_annie_asylum" name="costume" value="Asylum (S03E19)" class="annie asylum"><label for="costume_annie_asylum">Asylum (S03E19)</label>
+    <input type="radio" id="costume_annie_ballerannie" name="costume" value="Ballerannie (S02E11)" class="annie ballerannie"><label for="costume_annie_ballerannie">Ballerannie (S02E11)</label>
+    <input type="radio" id="costume_annie_security" name="costume" value="Campus Security (S01E20)" class="annie security"><label for="costume_annie_security">Campus Security (S01E20)</label>
+    <input type="radio" id="costume_annie_changlorious" name="costume" value="Changlorious Bastard (S03E21)" class="annie changlorious"><label for="costume_annie_changlorious">Changlorious Bastard (S03E21)</label>
+    <input type="radio" id="costume_annie_cheerleader" name="costume" value="Cheerleader (S01E13)" class="annie cheerleader"><label for="costume_annie_cheerleader">Cheerleader (S01E13)</label>
+    <input type="radio" id="costume_annie_mafia" name="costume" value="Chicken Mafia (S01E18)" class="annie mafia"><label for="costume_annie_mafia">Chicken Mafia (S01E18)</label>
+    <input type="radio" id="costume_annie_hurt" name="costume" value="Christmas Brawl (S01E12)" class="annie hurt"><label for="costume_annie_hurt">Christmas Brawl (S01E12)</label>
+    <input type="radio" id="costume_annie_paint" name="costume" value="Covered In Paint (S02E24)" class="annie paint"><label for="costume_annie_paint">Covered In Paint (S02E24)</label>
+    <input type="radio" id="costume_annie_debate" name="costume" value="Debate Uniform (S01E09)" class="annie debate"><label for="costume_annie_debate">Debate Uniform (S01E09)</label>
+    <input type="radio" id="costume_annie_dorothy" name="costume" value="Dorothy (Judy Garland) (S03E11)" class="annie dorothy"><label for="costume_annie_dorothy">Dorothy (Judy Garland) (S03E11)</label>
+    <input type="radio" id="costume_annie_hanniebal" name="costume" value="Evil Annie (Hanniebal) (S04E10)" class="annie hanniebal"><label for="costume_annie_hanniebal">Evil Annie (Hanniebal) (S04E10)</label>
+    <input type="radio" id="costume_annie_reddress" name="costume" value="Evil Annie (Red Dress) (S04E13)" class="annie reddress"><label for="costume_annie_reddress">Evil Annie (Red Dress) (S04E13)</label>
+    <input type="radio" id="costume_annie_befine" name="costume" value="Finally Be Fine (S03E01)" class="annie befine"><label for="costume_annie_befine">Finally Be Fine (S03E01)</label>
+    <input type="radio" id="costume_annie_geneva" name="costume" value="Geneva (S03E16)" class="annie geneva"><label for="costume_annie_geneva">Geneva (S03E16)</label>
+    <input type="radio" id="costume_annie_german" name="costume" value="German Dirndl (S04E04)" class="annie german"><label for="costume_annie_german">German Dirndl (S04E04)</label>
+    <input type="radio" id="costume_annie_baby" name="costume" value="Greendale Baby (S04E01)" class="annie baby"><label for="costume_annie_baby">Greendale Baby (S04E01)</label>
+    <input type="radio" id="costume_annie_poplock" name="costume" value="Heather Popandlocklear (S02E02)" class="annie poplock"><label for="costume_annie_poplock">Heather Popandlocklear (S02E02)</label>
+    <input type="radio" id="costume_annie_hector" name="costume" value="Hector the Well-Endowed (S02E14)" class="annie hector"><label for="costume_annie_hector">Hector the Well-Endowed (S02E14)</label>
+    <input type="radio" id="costume_annie_hectorlvlup" name="costume" value="Hector the Well-Endowed (Advanced) (S05E10)" class="annie hectorlvlup"><label for="costume_annie_hectorlvlup">Hector the Well-Endowed (Advanced) (S05E10)</label>
+    <input type="radio" id="costume_annie_honey" name="costume" value="Honey Bunny (S02E19)" class="annie honey"><label for="costume_annie_honey">Honey Bunny (S02E19)</label>
+    <input type="radio" id="costume_annie_hooded" name="costume" value="Hooded Detective Coat (S05E03)" class="annie hooded"><label for="costume_annie_hooded">Hooded Detective Coat (S05E03)</label>
+    <input type="radio" id="costume_annie_hospital" name="costume" value="Hospital Gown (S01E08)" class="annie hospital"><label for="costume_annie_hospital">Hospital Gown (S01E08)</label>
+    <input type="radio" id="costume_annie_karatannie" name="costume" value="Karatannie (S02E21)" class="annie karatannie"><label for="costume_annie_karatannie">Karatannie (S02E21)</label>
+    <input type="radio" id="costume_annie_lawyer" name="costume" value="Lawyer (S03E17)" class="annie lawyer"><label for="costume_annie_lawyer">Lawyer (S03E17)</label>
+    <input type="radio" id="costume_annie_highschool" name="costume" value="Little Annie Adderall (S04E12)" class="annie highschool"><label for="costume_annie_highschool">Little Annie Adderall (S04E12)</label>
+    <input type="radio" id="costume_annie_riding" name="costume" value="Little Red Riding Hood (S02E06)" class="annie riding"><label for="costume_annie_riding">Little Red Riding Hood (S02E06)</label>
+    <input type="radio" id="costume_annie_lingerie" name="costume" value="Magnum's Angel (S03E05)" class="annie lingerie"><label for="costume_annie_lingerie">Magnum's Angel (S03E05)</label>
+    <input type="radio" id="costume_annie_warfare" name="costume" value="Modern Warfare (S01E23)" class="annie warfare"><label for="costume_annie_warfare">Modern Warfare (S01E23)</label>
+    <input type="radio" id="costume_annie_nurse" name="costume" value="Nurse (S03E14)" class="annie nurse"><label for="costume_annie_nurse">Nurse (S03E14)</label>
+    <input type="radio" id="costume_annie_pageant" name="costume" value="Planet Christmas (S03E10)" class="annie pageant"><label for="costume_annie_pageant">Planet Christmas (S03E10)</label>
+    <input type="radio" id="costume_annie_princess" name="costume" value="Princess Annie (S03E07)" class="annie princess"><label for="costume_annie_princess">Princess Annie (S03E07)</label>
+    <input type="radio" id="costume_annie_reindeer" name="costume" value="Reindeer Sweater (S03E10)" class="annie reindeer"><label for="costume_annie_reindeer">Reindeer Sweater (S03E10)</label>
+    <input type="radio" id="costume_annie_samara" name="costume" value="Samara (Ring Girl) (S04E02)" class="annie samara"><label for="costume_annie_samara">Samara (Ring Girl) (S04E02)</label>
+    <input type="radio" id="costume_annie_script" name="costume" value="Script Supervisor (S03E08)" class="annie script"><label for="costume_annie_script">Script Supervisor (S03E08)</label>
+    <input type="radio" id="costume_annie_santa" name="costume" value="Sexy Santa (S03E10)" class="annie santa"><label for="costume_annie_santa">Sexy Santa (S03E10)</label>
+    <input type="radio" id="costume_annie_party" name="costume" value="Sinful Party (S03E05)" class="annie party"><label for="costume_annie_party">Sinful Party (S03E05)</label>
+    <input type="radio" id="costume_annie_skeleton" name="costume" value="Skeleton (S01E07)" class="annie skeleton"><label for="costume_annie_skeleton">Skeleton (S01E07)</label>
+    <input type="radio" id="costume_annie_tightship" name="costume" value="Tight Ship (S05E11)" class="annie tightship"><label for="costume_annie_tightship">Tight Ship (S05E11)</label>
+    <input type="radio" id="costume_annie_timebattle" name="costume" value="Timeline Battle (S04E13)" class="annie timebattle"><label for="costume_annie_timebattle">Timeline Battle (S04E13)</label>
+    <input type="radio" id="costume_annie_victorian" name="costume" value="Victorian (S03E05)" class="annie victorian"><label for="costume_annie_victorian">Victorian (S03E05)</label>
+    <input type="radio" id="costume_annie_werewolf" name="costume" value="Werewolf (S03E05)" class="annie werewolf"><label for="costume_annie_werewolf">Werewolf (S03E05)</label>
+    <input type="radio" id="costume_annie_western" name="costume" value="Western Dress (S02E23)" class="annie western"><label for="costume_annie_western">Western Dress (S02E23)</label>
+    <input type="radio" id="costume_annie_wig" name="costume" value="Wigging Out (S03E19)" class="annie wig"><label for="costume_annie_wig">Wigging Out (S03E19)</label>
+    <input type="radio" id="costume_annie_zombie" name="costume" value="Zombie (S03E20)" class="annie zombie"><label for="costume_annie_zombie">Zombie (S03E20)</label>
+    <h3>Britta Perry</h3>
+    <input type="radio" id="costume_britta_base" name="costume" value="Britta Perry (base)" class="britta base"><label for="costume_britta_base">Britta Perry (base)</label>
+    <input type="radio" id="costume_britta_astronaut" name="costume" value="Astronaut (S02E04)" class="britta astronaut"><label for="costume_britta_astronaut">Astronaut (S02E04)</label>
+    <input type="radio" id="costume_britta_asylum" name="costume" value="Asylum (S03E19)" class="britta asylum"><label for="costume_britta_asylum">Asylum (S03E19)</label>
+    <input type="radio" id="costume_britta_bitten" name="costume" value="Bitten (S03E05)" class="britta bitten"><label for="costume_britta_bitten">Bitten (S03E05)</label>
+    <input type="radio" id="costume_britta_bloodied" name="costume" value="Bloody Hell! (S03E05)" class="britta bloodied"><label for="costume_britta_bloodied">Bloody Hell! (S03E05)</label>
+    <input type="radio" id="costume_britta_brittabot" name="costume" value="Brittabot (S02E11)" class="britta brittabot"><label for="costume_britta_brittabot">Brittabot (S02E11)</label>
+    <input type="radio" id="costume_britta_dragon" name="costume" value="Brittasaurus Rex (S02E06)" class="britta dragon"><label for="costume_britta_dragon">Brittasaurus Rex (S02E06)</label>
+    <input type="radio" id="costume_britta_buzzkill" name="costume" value="Buzzkill (S05E11)" class="britta buzzkill"><label for="costume_britta_buzzkill">Buzzkill (S05E11)</label>
+    <input type="radio" id="costume_britta_cheerleader" name="costume" value="Cheerleader (S01E13)" class="britta cheerleader"><label for="costume_britta_cheerleader">Cheerleader (S01E13)</label>
+    <input type="radio" id="costume_britta_mafia" name="costume" value="Chicken Mafia (S01E18)" class="britta mafia"><label for="costume_britta_mafia">Chicken Mafia (S01E18)</label>
+    <input type="radio" id="costume_britta_hurt" name="costume" value="Christmas Brawl (S01E12)" class="britta hurt"><label for="costume_britta_hurt">Christmas Brawl (S01E12)</label>
+    <input type="radio" id="costume_britta_coldturkey" name="costume" value="Cold Turkey (S01E09)" class="britta coldturkey"><label for="costume_britta_coldturkey">Cold Turkey (S01E09)</label>
+    <input type="radio" id="costume_britta_dancer" name="costume" value="Dancer (S01E14)" class="britta dancer"><label for="costume_britta_dancer">Dancer (S01E14)</label>
+    <input type="radio" id="costume_britta_dark" name="costume" value="Darkest Timeline (S03E04)" class="britta dark"><label for="costume_britta_dark">Darkest Timeline (S03E04)</label>
+    <input type="radio" id="costume_britta_doctor" name="costume" value="Dr. Perry (S03E16)" class="britta doctor"><label for="costume_britta_doctor">Dr. Perry (S03E16)</label>
+    <input type="radio" id="costume_britta_fibrosis" name="costume" value="Fibrosis The Ranger (S05E10)" class="britta fibrosis"><label for="costume_britta_fibrosis">Fibrosis The Ranger (S05E10)</label>
+    <input type="radio" id="costume_britta_finallybefine" name="costume" value="Finally Be Fine (S03E01)" class="britta finallybefine"><label for="costume_britta_finallybefine">Finally Be Fine (S03E01)</label>
+    <input type="radio" id="costume_britta_german" name="costume" value="German Dirndl (S04E04)" class="britta german"><label for="costume_britta_german">German Dirndl (S04E04)</label>
+    <input type="radio" id="costume_britta_ham" name="costume" value="Ham (S04E02)" class="britta ham"><label for="costume_britta_ham">Ham (S04E02)</label>
+    <input type="radio" id="costume_britta_popnlock" name="costume" value="Heather Popandlocklear (S02E02)" class="britta popnlock"><label for="costume_britta_popnlock">Heather Popandlocklear (S02E02)</label>
+    <input type="radio" id="costume_britta_fundraising" name="costume" value="Help the Gulf (S02E03)" class="britta fundraising"><label for="costume_britta_fundraising">Help the Gulf (S02E03)</label>
+    <input type="radio" id="costume_britta_cool" name="costume" value="Kool Kat (S02E13)" class="britta cool"><label for="costume_britta_cool">Kool Kat (S02E13)</label>
+    <input type="radio" id="costume_britta_lavaworld" name="costume" value="Lava World (S05E05)" class="britta lavaworld"><label for="costume_britta_lavaworld">Lava World (S05E05)</label>
+    <input type="radio" id="costume_britta_lavernica" name="costume" value="Lavernica (S02E14)" class="britta lavernica"><label for="costume_britta_lavernica">Lavernica (S02E14)</label>
+    <input type="radio" id="costume_britta_lingerie" name="costume" value="Magnum's Angel (S03E05)" class="britta lingerie"><label for="costume_britta_lingerie">Magnum's Angel (S03E05)</label>
+    <input type="radio" id="costume_britta_king" name="costume" value="Me So Christmas (S03E10)" class="britta king"><label for="costume_britta_king">Me So Christmas (S03E10)</label>
+    <input type="radio" id="costume_britta_mia" name="costume" value="Mia Wallace (S02E19)" class="britta mia"><label for="costume_britta_mia">Mia Wallace (S02E19)</label>
+    <input type="radio" id="costume_britta_mj" name="costume" value="Michael Jackson (S03E12)" class="britta mj"><label for="costume_britta_mj">Michael Jackson (S03E12)</label>
+    <input type="radio" id="costume_britta_paintball" name="costume" value="Modern Warfare (S01E23)" class="britta paintball"><label for="costume_britta_paintball">Modern Warfare (S01E23)</label>
+    <input type="radio" id="costume_britta_dino" name="costume" value="Monster (S02E06)" class="britta dino"><label for="costume_britta_dino">Monster (S02E06)</label>
+    <input type="radio" id="costume_britta_tree" name="costume" value="Mute Tree (S03E10)" class="britta tree"><label for="costume_britta_tree">Mute Tree (S03E10)</label>
+    <input type="radio" id="costume_britta_spades" name="costume" value="Queen of Spades (S02E23)" class="britta spades"><label for="costume_britta_spades">Queen of Spades (S02E23)</label>
+    <input type="radio" id="costume_britta_peyote" name="costume" value="On Peyote (S03E19)" class="britta peyote"><label for="costume_britta_peyote">On Peyote (S03E19)</label>
+    <input type="radio" id="costume_britta_psychopath" name="costume" value="Psychopath (S03E05)" class="britta psychopath"><label for="costume_britta_psychopath">Psychopath (S03E05)</label>
+    <input type="radio" id="costume_britta_punk" name="costume" value="Punky Protester (S04E12)" class="britta punk"><label for="costume_britta_punk">Punky Protester (S04E12)</label>
+    <input type="radio" id="costume_britta_squirrel" name="costume" value="Squirrel (S01E07)" class="britta squirrel"><label for="costume_britta_squirrel">Squirrel (S01E07)</label>
+    <input type="radio" id="costume_britta_teapot" name="costume" value="Teapot (S01E14)" class="britta teapot"><label for="costume_britta_teapot">Teapot (S01E14)</label>
+    <input type="radio" id="costume_britta_timelinebattle" name="costume" value="Timeline Battle (S04E13)" class="britta timelinebattle"><label for="costume_britta_timelinebattle">Timeline Battle (S04E13)</label>
+    <input type="radio" id="costume_britta_trannyqueen" name="costume" value="Tranny Queen (S01E25)" class="britta trannyqueen"><label for="costume_britta_trannyqueen">Tranny Queen (S01E25)</label>
+    <input type="radio" id="costume_britta_protest" name="costume" value="U.N. Protest (S03E02)" class="britta protest"><label for="costume_britta_protest">U.N. Protest (S03E02)</label>
+    <input type="radio" id="costume_britta_zombie" name="costume" value="Zombie (S02E06)" class="britta zombie"><label for="costume_britta_zombie">Zombie (S02E06)</label>
     <h3>Buddy</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/buddy/base.png">
-      <span class="character buddy">
-    </a>
-  </li>
-  <li>
-    <h3>Chang</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/chang/base.png">
-      <span class="character chang">
-    </a>
-  </li>
-  <li>
-    <h3>Dean</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/dean/base.png">
-      <span class="character dean">
-    </a>
-  </li>
-  <li>
-    <h3>Duncan</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/duncan/base.png">
-      <span class="character duncan">
-    </a>
-  </li>
-  <li>
+    <input type="radio" id="costume_buddy_base" name="costume" value="Buddy (base)" class="buddy base"><label for="costume_buddy_base">Buddy (base)</label>
+    <input type="radio" id="costume_buddy_master_exploder" name="costume" value="Master Exploder (fanmade)" class="buddy master_exploder"><label for="costume_buddy_master_exploder">Master Exploder (fanmade)</label>
+    <h3>Ben Chang</h3>
+    <input type="radio" id="costume_chang_base" name="costume" value="Ben Chang (base)" class="chang base"><label for="costume_chang_base">Ben Chang (base)</label>
+    <input type="radio" id="costume_chang_brutalitops" name="costume" value="Brutalitops (S02E14)" class="chang brutalitops"><label for="costume_chang_brutalitops">Brutalitops (S02E14)</label>
+    <input type="radio" id="costume_chang_butch" name="costume" value="Butch Coolidge (S02E19)" class="chang butch"><label for="costume_chang_butch">Butch Coolidge (S02E19)</label>
+    <input type="radio" id="costume_chang_cheerleader" name="costume" value="Cheerleader (S02E23)" class="chang cheerleader"><label for="costume_chang_cheerleader">Cheerleader (S02E23)</label>
+    <input type="radio" id="costume_chang_dictator" name="costume" value="Dictator (S03E21)" class="chang dictator"><label for="costume_chang_dictator">Dictator (S03E21)</label>
+    <input type="radio" id="costume_chang_dingleberry" name="costume" value="Dingleberry The Troll (S05E10)" class="chang dingleberry"><label for="costume_chang_dingleberry">Dingleberry The Troll (S05E10)</label>
+    <input type="radio" id="costume_chang_evil" name="costume" value="Evil Chang (s4promo)" class="chang evil"><label for="costume_chang_evil">Evil Chang (s4promo)</label>
+    <input type="radio" id="costume_chang_father" name="costume" value="Father (S02E18)" class="chang father"><label for="costume_chang_father">Father (S02E18)</label>
+    <input type="radio" id="costume_chang_popnlock" name="costume" value="Heather Popandlocklear (S02E02)" class="chang popnlock"><label for="costume_chang_popnlock">Heather Popandlocklear (S02E02)</label>
+    <input type="radio" id="costume_chang_cannotdie" name="costume" value="I Cannot Die (S01E13)" class="chang cannotdie"><label for="costume_chang_cannotdie">I Cannot Die (S01E13)</label>
+    <input type="radio" id="costume_chang_naked" name="costume" value="Kevin (S04E01)" class="chang naked"><label for="costume_chang_naked">Kevin (S04E01)</label>
+    <input type="radio" id="costume_chang_leather" name="costume" value="Leather Jacket (S01E16)" class="chang leather"><label for="costume_chang_leather">Leather Jacket (S01E16)</label>
+    <input type="radio" id="costume_chang_peggy" name="costume" value="Peggy Fleming (S02E06)" class="chang peggy"><label for="costume_chang_peggy">Peggy Fleming (S02E06)</label>
+    <input type="radio" id="costume_chang_ymca" name="costume" value="Robbed at the YMCA (S01E19)" class="chang ymca"><label for="costume_chang_ymca">Robbed at the YMCA (S01E19)</label>
+    <input type="radio" id="costume_chang_safety" name="costume" value="Safety First (S01E24)" class="chang safety"><label for="costume_chang_safety">Safety First (S01E24)</label>
+    <input type="radio" id="costume_chang_shaving" name="costume" value="Shaving Cream (S04E04)" class="chang shaving"><label for="costume_chang_shaving">Shaving Cream (S04E04)</label>
+    <input type="radio" id="costume_chang_soccer" name="costume" value="Soccer Fan (S02E15)" class="chang soccer"><label for="costume_chang_soccer">Soccer Fan (S02E15)</label>
+    <input type="radio" id="costume_chang_snowman" name="costume" value="Snowman (S02E11)" class="chang snowman"><label for="costume_chang_snowman">Snowman (S02E11)</label>
+    <input type="radio" id="costume_chang_enterchangment" name="costume" value="That's Enter-chang-ment (S03E14)" class="chang enterchangment"><label for="costume_chang_enterchangment">That's Enter-chang-ment (S03E14)</label>
+    <input type="radio" id="costume_chang_understudy" name="costume" value="Understudy (S03E08)" class="chang understudy"><label for="costume_chang_understudy">Understudy (S03E08)</label>
+    <input type="radio" id="costume_chang_zombie" name="costume" value="Zombie (S02E06)" class="chang zombie"><label for="costume_chang_zombie">Zombie (S02E06)</label>
+    <h3>Dean Craig Pelton</h3>
+    <input type="radio" id="costume_dean_base" name="costume" value="Dean Craig Pelton (base)" class="dean base"><label for="costume_dean_base">Dean Craig Pelton (base)</label>
+    <input type="radio" id="costume_dean_bee" name="costume" value="Bumblebee (S02E12)" class="dean bee"><label for="costume_dean_bee">Bumblebee (S02E12)</label>
+    <input type="radio" id="costume_dean_construction" name="costume" value="Construction (S03E22)" class="dean construction"><label for="costume_dean_construction">Construction (S03E22)</label>
+    <input type="radio" id="costume_dean_devil" name="costume" value="Devil Dean (S03E05)" class="dean devil"><label for="costume_dean_devil">Devil Dean (S03E05)</label>
+    <input type="radio" id="costume_dean_donna" name="costume" value="Donna Reed (S04E08)" class="dean donna"><label for="costume_dean_donna">Donna Reed (S04E08)</label>
+    <input type="radio" id="costume_dean_cowboy" name="costume" value="How-Dean Pilgrims! (S04E05)" class="dean cowboy"><label for="costume_dean_cowboy">How-Dean Pilgrims! (S04E05)</label>
+    <input type="radio" id="costume_dean_jgdiehard" name="costume" value="Joseph Gordon Diehard (S05E10)" class="dean jgdiehard"><label for="costume_dean_jgdiehard">Joseph Gordon Diehard (S05E10)</label>
+    <input type="radio" id="costume_dean_mardigras" name="costume" value="Mardi Gras (S02E21)" class="dean mardigras"><label for="costume_dean_mardigras">Mardi Gras (S02E21)</label>
+    <input type="radio" id="costume_dean_newdean" name="costume" value="New Dean (S03E01)" class="dean newdean"><label for="costume_dean_newdean">New Dean (S03E01)</label>
+    <input type="radio" id="costume_dean_conductor" name="costume" value="Train Conductor (S03E15)" class="dean conductor"><label for="costume_dean_conductor">Train Conductor (S03E15)</label>
+    <input type="radio" id="costume_dean_unclesam" name="costume" value="Uncle Sam (S02E17)" class="dean unclesam"><label for="costume_dean_unclesam">Uncle Sam (S02E17)</label>
+    <h3>Ian Duncan</h3>
+    <input type="radio" id="costume_duncan_base" name="costume" value="Ian Duncan (base)" class="duncan base"><label for="costume_duncan_base">Ian Duncan (base)</label>
     <h3>Fat Neil</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/fatneil/base.png">
-      <span class="character fatneil">
-    </a>
-  </li>
-  <li>
-    <h3>Garrett</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/garrett/base.png">
-      <span class="character garrett">
-    </a>
-  </li>
-  <li>
-    <h3>Gilbert</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/gilbert/base.png">
-      <span class="character gilbert">
-    </a>
-  </li>
-  <li>
-    <h3>Guzman</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/guzman/base.png">
-      <span class="character guzman">
-    </a>
-  </li>
-  <li>
-    <h3>Jeff</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/jeff/base.png">
-      <span class="character jeff">
-    </a>
-  </li>
-  <li>
-    <h3>Leonard</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/leonard/base.png">
-      <span class="character leonard">
-    </a>
-  </li>
-  <li>
-    <h3>Pierce</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/pierce/base.png">
-      <span class="character pierce">
-    </a>
-  </li>
-  <li>
-    <h3>Rich</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/rich/base.png">
-      <span class="character rich">
-    </a>
-  </li>
-  <li>
-    <h3>Shirley</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/shirley/base.png">
-      <span class="character shirley">
-    </a>
-  </li>
-  <li>
-    <h3>Troy</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/troy/base.png">
-      <span class="character troy">
-    </a>
-  </li>
-  <li>
-    <h3>Vaughn</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vaughn/base.png">
-      <span class="character vaughn">
-    </a>
-  </li>
-  <li>
-    <h3>Vice Dean</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicedean/base.png">
-      <span class="character vicedean">
-    </a>
-  </li>
-  <li>
-    <h3>Vicki</h3>
-    <a href="https://raw.github.com/hawkthorne/hawkthorne-journey/master/src/images/characters/vicki/base.png">
-      <span class="character vicki">
-    </a>
-  </li>
-</ul>
+    <input type="radio" id="costume_fatneil_base" name="costume" value="Fat Neil (base)" class="fatneil base"><label for="costume_fatneil_base">Fat Neil (base)</label>
+    <input type="radio" id="costume_fatneil_coach" name="costume" value="Coach (S04E07)" class="fatneil coach"><label for="costume_fatneil_coach">Coach (S04E07)</label>
+    <input type="radio" id="costume_fatneil_duquense" name="costume" value="Duquesne (S02E14)" class="fatneil duquense"><label for="costume_fatneil_duquense">Duquesne (S02E14)</label>
+    <h3>Garrett Lambert</h3>
+    <input type="radio" id="costume_garrett_base" name="costume" value="Garrett Lambert (base)" class="garrett base"><label for="costume_garrett_base">Garrett Lambert (base)</label>
+    <input type="radio" id="costume_garrett_jammies" name="costume" value="Camo Jammies (S03E13)" class="garrett jammies"><label for="costume_garrett_jammies">Camo Jammies (S03E13)</label>
+    <input type="radio" id="costume_garrett_alien" name="costume" value="Creepy Alien (S01E05)" class="garrett alien"><label for="costume_garrett_alien">Creepy Alien (S01E05)</label>
+    <h3>Gilbert Lawson</h3>
+    <input type="radio" id="costume_gilbert_base" name="costume" value="Gilbert Lawson (base)" class="gilbert base"><label for="costume_gilbert_base">Gilbert Lawson (base)</label>
+    <h3>Luis Guzman</h3>
+    <input type="radio" id="costume_guzman_base" name="costume" value="Luis Guzman (base)" class="guzman base"><label for="costume_guzman_base">Luis Guzman (base)</label>
+    <h3>Jeff Winger</h3>
+    <input type="radio" id="costume_jeff_base" name="costume" value="Jeff Winger (base)" class="jeff base"><label for="costume_jeff_base">Jeff Winger (base)</label>
+    <input type="radio" id="costume_jeff_astronaut" name="costume" value="Astronaut (S02E04)" class="jeff astronaut"><label for="costume_jeff_astronaut">Astronaut (S02E04)</label>
+    <input type="radio" id="costume_jeff_asylum" name="costume" value="Asylum (S03E19)" class="jeff asylum"><label for="costume_jeff_asylum">Asylum (S03E19)</label>
+    <input type="radio" id="costume_jeff_aviators" name="costume" value="Aviators (S03E12)" class="jeff aviators"><label for="costume_jeff_aviators">Aviators (S03E12)</label>
+    <input type="radio" id="costume_jeff_bball" name="costume" value="B-Ball (S02E07)" class="jeff bball"><label for="costume_jeff_bball">B-Ball (S02E07)</label>
+    <input type="radio" id="costume_jeff_naked" name="costume" value="Birthday Suit (S01E17)" class="jeff naked"><label for="costume_jeff_naked">Birthday Suit (S01E17)</label>
+    <input type="radio" id="costume_jeff_boxer" name="costume" value="Boxer (S04E02)" class="jeff boxer"><label for="costume_jeff_boxer">Boxer (S04E02)</label>
+    <input type="radio" id="costume_jeff_carpediem" name="costume" value="Carpe Diem! (S01E03)" class="jeff carpediem"><label for="costume_jeff_carpediem">Carpe Diem! (S01E03)</label>
+    <input type="radio" id="costume_jeff_hurt" name="costume" value="Christmas Brawl (S01E12)" class="jeff hurt"><label for="costume_jeff_hurt">Christmas Brawl (S01E12)</label>
+    <input type="radio" id="costume_jeff_darkest" name="costume" value="Darkest Timeline (S03E04)" class="jeff darkest"><label for="costume_jeff_darkest">Darkest Timeline (S03E04)</label>
+    <input type="radio" id="costume_jeff_david" name="costume" value="David Beckham (S02E06)" class="jeff david"><label for="costume_jeff_david">David Beckham (S02E06)</label>
+    <input type="radio" id="costume_jeff_dean" name="costume" value="Dean Pelton (S03E08)" class="jeff dean"><label for="costume_jeff_dean">Dean Pelton (S03E08)</label>
+    <input type="radio" id="costume_jeff_doctor" name="costume" value="Doctor Winger (S03E16)" class="jeff doctor"><label for="costume_jeff_doctor">Doctor Winger (S03E16)</label>
+    <input type="radio" id="costume_jeff_drunk" name="costume" value="Drunk (S01E16)" class="jeff drunk"><label for="costume_jeff_drunk">Drunk (S01E16)</label>
+    <input type="radio" id="costume_jeff_electro" name="costume" value="Electrocuted (S03E20)" class="jeff electro"><label for="costume_jeff_electro">Electrocuted (S03E20)</label>
+    <input type="radio" id="costume_jeff_darkundies" name="costume" value="Evil Undies (S04E13)" class="jeff darkundies"><label for="costume_jeff_darkundies">Evil Undies (S04E13)</label>
+    <input type="radio" id="costume_jeff_fbf" name="costume" value="Finally Be Fine (S03E01)" class="jeff fbf"><label for="costume_jeff_fbf">Finally Be Fine (S03E01)</label>
+    <input type="radio" id="costume_jeff_goldblum" name="costume" value="Goldblumming (S01E19)" class="jeff goldblum"><label for="costume_jeff_goldblum">Goldblumming (S01E19)</label>
+    <input type="radio" id="costume_jeff_baby" name="costume" value="Greendale Baby (S04E01)" class="jeff baby"><label for="costume_jeff_baby">Greendale Baby (S04E01)</label>
+    <input type="radio" id="costume_jeff_hawkeye" name="costume" value="Hawkeye (S01E13)" class="jeff hawkeye"><label for="costume_jeff_hawkeye">Hawkeye (S01E13)</label>
+    <input type="radio" id="costume_jeff_poplock" name="costume" value="Heather Popandlocklear (S02E02)" class="jeff poplock"><label for="costume_jeff_poplock">Heather Popandlocklear (S02E02)</label>
+    <input type="radio" id="costume_jeff_hungerdeans" name="costume" value="Hunger Deans (S04E01)" class="jeff hungerdeans"><label for="costume_jeff_hungerdeans">Hunger Deans (S04E01)</label>
+    <input type="radio" id="costume_jeff_jeffinthebox" name="costume" value="Jeff-In-The-Box (S02E11)" class="jeff jeffinthebox"><label for="costume_jeff_jeffinthebox">Jeff-In-The-Box (S02E11)</label>
+    <input type="radio" id="costume_jeff_spades" name="costume" value="King of Spades (S02E23)" class="jeff spades"><label for="costume_jeff_spades">King of Spades (S02E23)</label>
+    <input type="radio" id="costume_jeff_cool" name="costume" value="Kool Kat (S02E13)" class="jeff cool"><label for="costume_jeff_cool">Kool Kat (S02E13)</label>
+    <input type="radio" id="costume_jeff_app" name="costume" value="Level 4 (S05E08)" class="jeff app"><label for="costume_jeff_app">Level 4 (S05E08)</label>
+    <input type="radio" id="costume_jeff_mar" name="costume" value="Marrrrrrrr (S02E14)" class="jeff mar"><label for="costume_jeff_mar">Marrrrrrrr (S02E14)</label>
+    <input type="radio" id="costume_jeff_straightjacket" name="costume" value="Mercury Poisoning (S02E21)" class="jeff straightjacket"><label for="costume_jeff_straightjacket">Mercury Poisoning (S02E21)</label>
+    <input type="radio" id="costume_jeff_warfare" name="costume" value="Modern Warfare (S01E23)" class="jeff warfare"><label for="costume_jeff_warfare">Modern Warfare (S01E23)</label>
+    <input type="radio" id="costume_jeff_mohawk" name="costume" value="Mohawk (S03E19)" class="jeff mohawk"><label for="costume_jeff_mohawk">Mohawk (S03E19)</label>
+    <input type="radio" id="costume_jeff_monkeygas" name="costume" value="Monkey Gas (S03E01)" class="jeff monkeygas"><label for="costume_jeff_monkeygas">Monkey Gas (S03E01)</label>
+    <input type="radio" id="costume_jeff_plaid" name="costume" value="Plaid Coat (S03E14)" class="jeff plaid"><label for="costume_jeff_plaid">Plaid Coat (S03E14)</label>
+    <input type="radio" id="costume_jeff_planet" name="costume" value="Planet Christmas (S03E10)" class="jeff planet"><label for="costume_jeff_planet">Planet Christmas (S03E10)</label>
+    <input type="radio" id="costume_jeff_professor" name="costume" value="Professor (S05E02)" class="jeff professor"><label for="costume_jeff_professor">Professor (S05E02)</label>
+    <input type="radio" id="costume_jeff_skater" name="costume" value="Proving A Point (S04E04)" class="jeff skater"><label for="costume_jeff_skater">Proving A Point (S04E04)</label>
+    <input type="radio" id="costume_jeff_ricky" name="costume" value="Ricky Nightshade (S03E21)" class="jeff ricky"><label for="costume_jeff_ricky">Ricky Nightshade (S03E21)</label>
+    <input type="radio" id="costume_jeff_hulk" name="costume" value="Seacrest Hulk (S03E12)" class="jeff hulk"><label for="costume_jeff_hulk">Seacrest Hulk (S03E12)</label>
+    <input type="radio" id="costume_jeff_cowboy" name="costume" value="Sexy Cowboy (S01E07)" class="jeff cowboy"><label for="costume_jeff_cowboy">Sexy Cowboy (S01E07)</label>
+    <input type="radio" id="costume_jeff_shorts" name="costume" value="Short Shorts (S01E17)" class="jeff shorts"><label for="costume_jeff_shorts">Short Shorts (S01E17)</label>
+    <input type="radio" id="costume_jeff_riggs" name="costume" value="Sir Riggs Diehard (S05E10)" class="jeff riggs"><label for="costume_jeff_riggs">Sir Riggs Diehard (S05E10)</label>
+    <input type="radio" id="costume_jeff_abeds_shirt" name="costume" value="Spanish 101 (S01E02)" class="jeff abeds_shirt"><label for="costume_jeff_abeds_shirt">Spanish 101 (S01E02)</label>
+    <input type="radio" id="costume_jeff_thoraxis" name="costume" value="Thoraxis (S04E03)" class="jeff thoraxis"><label for="costume_jeff_thoraxis">Thoraxis (S04E03)</label>
+    <input type="radio" id="costume_jeff_timeline" name="costume" value="Timeline Battle (S04E13)" class="jeff timeline"><label for="costume_jeff_timeline">Timeline Battle (S04E13)</label>
+    <input type="radio" id="costume_jeff_anime" name="costume" value="Tinkletown (S03E09)" class="jeff anime"><label for="costume_jeff_anime">Tinkletown (S03E09)</label>
+    <input type="radio" id="costume_jeff_train" name="costume" value="Train Conductor (S02E21)" class="jeff train"><label for="costume_jeff_train">Train Conductor (S02E21)</label>
+    <input type="radio" id="costume_jeff_undies" name="costume" value="Undies (S01E17)" class="jeff undies"><label for="costume_jeff_undies">Undies (S01E17)</label>
+    <input type="radio" id="costume_jeff_vampire" name="costume" value="Vampire (S03E05)" class="jeff vampire"><label for="costume_jeff_vampire">Vampire (S03E05)</label>
+    <input type="radio" id="costume_jeff_vega" name="costume" value="Vincent Vega (S02E19)" class="jeff vega"><label for="costume_jeff_vega">Vincent Vega (S02E19)</label>
+    <input type="radio" id="costume_jeff_wingman" name="costume" value="Wingman (S05E11)" class="jeff wingman"><label for="costume_jeff_wingman">Wingman (S05E11)</label>
+    <input type="radio" id="costume_jeff_zombie" name="costume" value="Zombie (S02E06)" class="jeff zombie"><label for="costume_jeff_zombie">Zombie (S02E06)</label>
+    <h3>Leonard Rodriguez</h3>
+    <input type="radio" id="costume_leonard_base" name="costume" value="Leonard Rodriguez (base)" class="leonard base"><label for="costume_leonard_base">Leonard Rodriguez (base)</label>
+    <input type="radio" id="costume_leonard_asylum" name="costume" value="Asylum (S03E19)" class="leonard asylum"><label for="costume_leonard_asylum">Asylum (S03E19)</label>
+    <input type="radio" id="costume_leonard_paintball" name="costume" value="Paintball (S02E24)" class="leonard paintball"><label for="costume_leonard_paintball">Paintball (S02E24)</label>
+    <h3>Pierce Hawthorne</h3>
+    <input type="radio" id="costume_pierce_base" name="costume" value="Pierce Hawthorne (base)" class="pierce base"><label for="costume_pierce_base">Pierce Hawthorne (base)</label>
+    <input type="radio" id="costume_pierce_astronaut" name="costume" value="Astronaut (S02E04)" class="pierce astronaut"><label for="costume_pierce_astronaut">Astronaut (S02E04)</label>
+    <input type="radio" id="costume_pierce_beastmaster" name="costume" value="Beastmaster (S01E07)" class="pierce beastmaster"><label for="costume_pierce_beastmaster">Beastmaster (S01E07)</label>
+    <input type="radio" id="costume_pierce_naked" name="costume" value="Birthday Suit (S03E20)" class="pierce naked"><label for="costume_pierce_naked">Birthday Suit (S03E20)</label>
+    <input type="radio" id="costume_pierce_canoe" name="costume" value="Canoe (S01E19)" class="pierce canoe"><label for="costume_pierce_canoe">Canoe (S01E19)</label>
+    <input type="radio" id="costume_pierce_kirk" name="costume" value="Captain Kirk (S02E06)" class="pierce kirk"><label for="costume_pierce_kirk">Captain Kirk (S02E06)</label>
+    <input type="radio" id="costume_pierce_captain" name="costume" value="Captain Pierce (S01E19)" class="pierce captain"><label for="costume_pierce_captain">Captain Pierce (S01E19)</label>
+    <input type="radio" id="costume_pierce_hurt" name="costume" value="Christmas Brawl (S01E12)" class="pierce hurt"><label for="costume_pierce_hurt">Christmas Brawl (S01E12)</label>
+    <input type="radio" id="costume_pierce_wizard" name="costume" value="Cookie Crisp Wizard (S03E20)" class="pierce wizard"><label for="costume_pierce_wizard">Cookie Crisp Wizard (S03E20)</label>
+    <input type="radio" id="costume_pierce_drugs" name="costume" value="Drugs (S02E13)" class="pierce drugs"><label for="costume_pierce_drugs">Drugs (S02E13)</label>
+    <input type="radio" id="costume_pierce_fatreynolds" name="costume" value="Fat Burt Reynolds (S03E12)" class="pierce fatreynolds"><label for="costume_pierce_fatreynolds">Fat Burt Reynolds (S03E12)</label>
+    <input type="radio" id="costume_pierce_feethands" name="costume" value="Feet Hands (S03E05)" class="pierce feethands"><label for="costume_pierce_feethands">Feet Hands (S03E05)</label>
+    <input type="radio" id="costume_pierce_gimp" name="costume" value="The Gimp (S02E19)" class="pierce gimp"><label for="costume_pierce_gimp">The Gimp (S02E19)</label>
+    <input type="radio" id="costume_pierce_popnlock" name="costume" value="Heather Popandlocklear (S02E02)" class="pierce popnlock"><label for="costume_pierce_popnlock">Heather Popandlocklear (S02E02)</label>
+    <input type="radio" id="costume_pierce_hotdog" name="costume" value="Hotdog (S02E21)" class="pierce hotdog"><label for="costume_pierce_hotdog">Hotdog (S02E21)</label>
+    <input type="radio" id="costume_pierce_hulapaint" name="costume" value="Hula Paint Hallucination (S03E07)" class="pierce hulapaint"><label for="costume_pierce_hulapaint">Hula Paint Hallucination (S03E07)</label>
+    <input type="radio" id="costume_pierce_janetreno" name="costume" value="Janet Reno (S01E16)" class="pierce janetreno"><label for="costume_pierce_janetreno">Janet Reno (S01E16)</label>
+    <input type="radio" id="costume_pierce_lotus" name="costume" value="Level 5 Laser Lotus (S02E03)" class="pierce lotus"><label for="costume_pierce_lotus">Level 5 Laser Lotus (S02E03)</label>
+    <input type="radio" id="costume_pierce_madscientist" name="costume" value="Mad Scientist (S03E05)" class="pierce madscientist"><label for="costume_pierce_madscientist">Mad Scientist (S03E05)</label>
+    <input type="radio" id="costume_pierce_magnum" name="costume" value="Magnum (S03E05)" class="pierce magnum"><label for="costume_pierce_magnum">Magnum (S03E05)</label>
+    <input type="radio" id="costume_pierce_paintball" name="costume" value="Paintball Trooper (S02E24)" class="pierce paintball"><label for="costume_pierce_paintball">Paintball Trooper (S02E24)</label>
+    <input type="radio" id="costume_pierce_dickish" name="costume" value="Pierce the Dickish (S02E14)" class="pierce dickish"><label for="costume_pierce_dickish">Pierce the Dickish (S02E14)</label>
+    <input type="radio" id="costume_pierce_pillow" name="costume" value="Pillow Man (S03E14)" class="pierce pillow"><label for="costume_pierce_pillow">Pillow Man (S03E14)</label>
+    <input type="radio" id="costume_pierce_planet_christmas" name="costume" value="Planet Christmas (S03E10)" class="pierce planet_christmas"><label for="costume_pierce_planet_christmas">Planet Christmas (S03E10)</label>
+    <input type="radio" id="costume_pierce_teddy" name="costume" value="Teddy Pierce (S02E11)" class="pierce teddy"><label for="costume_pierce_teddy">Teddy Pierce (S02E11)</label>
+    <input type="radio" id="costume_pierce_western" name="costume" value="Western (S02E23)" class="pierce western"><label for="costume_pierce_western">Western (S02E23)</label>
+    <input type="radio" id="costume_pierce_wheelchair" name="costume" value="Wheelchair (S02E09)" class="pierce wheelchair"><label for="costume_pierce_wheelchair">Wheelchair (S02E09)</label>
+    <input type="radio" id="costume_pierce_zombie" name="costume" value="Zombie (S02E06)" class="pierce zombie"><label for="costume_pierce_zombie">Zombie (S02E06)</label>
+    <h3>Dr. Rich Stephenson</h3>
+    <input type="radio" id="costume_rich_base" name="costume" value="Dr. Rich Stephenson (base)" class="rich base"><label for="costume_rich_base">Dr. Rich Stephenson (base)</label>
+    <h3>Shirley Bennett</h3>
+    <input type="radio" id="costume_shirley_base" name="costume" value="Shirley Bennett (base)" class="shirley base"><label for="costume_shirley_base">Shirley Bennett (base)</label>
+    <input type="radio" id="costume_shirley_clubs" name="costume" value="Ace of Clubs (S02E23)" class="shirley clubs"><label for="costume_shirley_clubs">Ace of Clubs (S02E23)</label>
+    <input type="radio" id="costume_shirley_angel" name="costume" value="Angel (S03E05)" class="shirley angel"><label for="costume_shirley_angel">Angel (S03E05)</label>
+    <input type="radio" id="costume_shirley_space" name="costume" value="Astronaut (S02E04)" class="shirley space"><label for="costume_shirley_space">Astronaut (S02E04)</label>
+    <input type="radio" id="costume_shirley_babydoll" name="costume" value="Baby Doll (S02E11)" class="shirley babydoll"><label for="costume_shirley_babydoll">Baby Doll (S02E11)</label>
+    <input type="radio" id="costume_shirley_anime" name="costume" value="Big Cheddar (S03E09)" class="shirley anime"><label for="costume_shirley_anime">Big Cheddar (S03E09)</label>
+    <input type="radio" id="costume_shirley_book" name="costume" value="Book (S03E08)" class="shirley book"><label for="costume_shirley_book">Book (S03E08)</label>
+    <input type="radio" id="costume_shirley_security" name="costume" value="Campus Security (S01E20)" class="shirley security"><label for="costume_shirley_security">Campus Security (S01E20)</label>
+    <input type="radio" id="costume_shirley_captain" name="costume" value="Captain (S01E19)" class="shirley captain"><label for="costume_shirley_captain">Captain (S01E19)</label>
+    <input type="radio" id="costume_shirley_chef" name="costume" value="Chef (S03E21)" class="shirley chef"><label for="costume_shirley_chef">Chef (S03E21)</label>
+    <input type="radio" id="costume_shirley_hurt" name="costume" value="Christmas Brawl (S01E12)" class="shirley hurt"><label for="costume_shirley_hurt">Christmas Brawl (S01E12)</label>
+    <input type="radio" id="costume_shirley_crayon" name="costume" value="Crayon (S02E13)" class="shirley crayon"><label for="costume_shirley_crayon">Crayon (S02E13)</label>
+    <input type="radio" id="costume_shirley_dark" name="costume" value="Darkest Timeline (S03E04)" class="shirley dark"><label for="costume_shirley_dark">Darkest Timeline (S03E04)</label>
+    <input type="radio" id="costume_shirley_fbf" name="costume" value="Finally Be Fine (S03E01)" class="shirley fbf"><label for="costume_shirley_fbf">Finally Be Fine (S03E01)</label>
+    <input type="radio" id="costume_shirley_baby" name="costume" value="Greendale Baby (S04E01)" class="shirley baby"><label for="costume_shirley_baby">Greendale Baby (S04E01)</label>
+    <input type="radio" id="costume_shirley_potter" name="costume" value="Harry Potter (S01E07)" class="shirley potter"><label for="costume_shirley_potter">Harry Potter (S01E07)</label>
+    <input type="radio" id="costume_shirley_headnurse" name="costume" value="Head Nurse Bennett (S02E02)" class="shirley headnurse"><label for="costume_shirley_headnurse">Head Nurse Bennett (S02E02)</label>
+    <input type="radio" id="costume_shirley_poplock" name="costume" value="Heather Popandlocklear (S02E02)" class="shirley poplock"><label for="costume_shirley_poplock">Heather Popandlocklear (S02E02)</label>
+    <input type="radio" id="costume_shirley_jules" name="costume" value="Jules Winnfield (S02E19)" class="shirley jules"><label for="costume_shirley_jules">Jules Winnfield (S02E19)</label>
+    <input type="radio" id="costume_shirley_lingerie" name="costume" value="Magnum's Angel (S03E05)" class="shirley lingerie"><label for="costume_shirley_lingerie">Magnum's Angel (S03E05)</label>
+    <input type="radio" id="costume_shirley_glinda" name="costume" value="Not Miss Piggy (Glinda) (S02E06)" class="shirley glinda"><label for="costume_shirley_glinda">Not Miss Piggy (Glinda) (S02E06)</label>
+    <input type="radio" id="costume_shirley_oprah" name="costume" value="Oprah (S03E12)" class="shirley oprah"><label for="costume_shirley_oprah">Oprah (S03E12)</label>
+    <input type="radio" id="costume_shirley_planetchristmas" name="costume" value="Planet Christmas (S03E10)" class="shirley planetchristmas"><label for="costume_shirley_planetchristmas">Planet Christmas (S03E10)</label>
+    <input type="radio" id="costume_shirley_leia" name="costume" value="Princess Leia (S04E02)" class="shirley leia"><label for="costume_shirley_leia">Princess Leia (S04E02)</label>
+    <input type="radio" id="costume_shirley_sandwiches" name="costume" value="Shirley's Sandwiches (S04E04)" class="shirley sandwiches"><label for="costume_shirley_sandwiches">Shirley's Sandwiches (S04E04)</label>
+    <input type="radio" id="costume_shirley_timelinebattle" name="costume" value="Timeline Battle (S04E13)" class="shirley timelinebattle"><label for="costume_shirley_timelinebattle">Timeline Battle (S04E13)</label>
+    <input type="radio" id="costume_shirley_zippy" name="costume" value="Zip-a-Dee-Doo (S02E14)" class="shirley zippy"><label for="costume_shirley_zippy">Zip-a-Dee-Doo (S02E14)</label>
+    <input type="radio" id="costume_shirley_zombie" name="costume" value="Zombie (S02E06)" class="shirley zombie"><label for="costume_shirley_zombie">Zombie (S02E06)</label>
+    <h3>Troy Barnes</h3>
+    <input type="radio" id="costume_troy_base" name="costume" value="Troy Barnes (base)" class="troy base"><label for="costume_troy_base">Troy Barnes (base)</label>
+    <input type="radio" id="costume_troy_ac" name="costume" value="AC Repair (S03E22)" class="troy ac"><label for="costume_troy_ac">AC Repair (S03E22)</label>
+    <input type="radio" id="costume_troy_atv" name="costume" value="ATV Gear (S03E19)" class="troy atv"><label for="costume_troy_atv">ATV Gear (S03E19)</label>
+    <input type="radio" id="costume_troy_bball" name="costume" value="B-Ball (S02E07)" class="troy bball"><label for="costume_troy_bball">B-Ball (S02E07)</label>
+    <input type="radio" id="costume_troy_beatitudes" name="costume" value="Beat-itudes (S02E05)" class="troy beatitudes"><label for="costume_troy_beatitudes">Beat-itudes (S02E05)</label>
+    <input type="radio" id="costume_troy_bingbong" name="costume" value="Bing Bong (S02E14)" class="troy bingbong"><label for="costume_troy_bingbong">Bing Bong (S02E14)</label>
+    <input type="radio" id="costume_troy_bumblebee" name="costume" value="Bumblebee (S02E13)" class="troy bumblebee"><label for="costume_troy_bumblebee">Bumblebee (S02E13)</label>
+    <input type="radio" id="costume_troy_gambino" name="costume" value="Childish Gambino (fanmade)" class="troy gambino"><label for="costume_troy_gambino">Childish Gambino (fanmade)</label>
+    <input type="radio" id="costume_troy_mafia" name="costume" value="Chicken Mafia (S01E18)" class="troy mafia"><label for="costume_troy_mafia">Chicken Mafia (S01E18)</label>
+    <input type="radio" id="costume_troy_hurt" name="costume" value="Christmas Brawl (S01E12)" class="troy hurt"><label for="costume_troy_hurt">Christmas Brawl (S01E12)</label>
+    <input type="radio" id="costume_troy_christmas_tree" name="costume" value="Christmas Troy (S01E12)" class="troy christmas_tree"><label for="costume_troy_christmas_tree">Christmas Troy (S01E12)</label>
+    <input type="radio" id="costume_troy_chronicles" name="costume" value="Community College Chronicles (S01E09)" class="troy chronicles"><label for="costume_troy_chronicles">Community College Chronicles (S01E09)</label>
+    <input type="radio" id="costume_troy_constable" name="costume" value="Constable Reggie (S03E06)" class="troy constable"><label for="costume_troy_constable">Constable Reggie (S03E06)</label>
+    <input type="radio" id="costume_troy_cowboy" name="costume" value="Cowboy (S02E21)" class="troy cowboy"><label for="costume_troy_cowboy">Cowboy (S02E21)</label>
+    <input type="radio" id="costume_troy_dancer" name="costume" value="Dancer (S01E14)" class="troy dancer"><label for="costume_troy_dancer">Dancer (S01E14)</label>
+    <input type="radio" id="costume_troy_detective" name="costume" value="Detective (S03E17)" class="troy detective"><label for="costume_troy_detective">Detective (S03E17)</label>
+    <input type="radio" id="costume_troy_doctor" name="costume" value="Dr. Barnes (S03E16)" class="troy doctor"><label for="costume_troy_doctor">Dr. Barnes (S03E16)</label>
+    <input type="radio" id="costume_troy_eddie" name="costume" value="Eddie Murphy (S01E07)" class="troy eddie"><label for="costume_troy_eddie">Eddie Murphy (S01E07)</label>
+    <input type="radio" id="costume_troy_evil" name="costume" value="Evil Troy (S03E04)" class="troy evil"><label for="costume_troy_evil">Evil Troy (S03E04)</label>
+    <input type="radio" id="costume_troy_fiddla" name="costume" value="Fiddla, Please! (S02E20)" class="troy fiddla"><label for="costume_troy_fiddla">Fiddla, Please! (S02E20)</label>
+    <input type="radio" id="costume_troy_fbf" name="costume" value="Finally Be Fine (S03E01)" class="troy fbf"><label for="costume_troy_fbf">Finally Be Fine (S03E01)</label>
+    <input type="radio" id="costume_troy_baby" name="costume" value="Greendale Baby (S04E01)" class="troy baby"><label for="costume_troy_baby">Greendale Baby (S04E01)</label>
+    <input type="radio" id="costume_troy_popnlock" name="costume" value="Heather Popandlocklear (S02E02)" class="troy popnlock"><label for="costume_troy_popnlock">Heather Popandlocklear (S02E02)</label>
+    <input type="radio" id="costume_troy_hippie" name="costume" value="Hippie (S03E10)" class="troy hippie"><label for="costume_troy_hippie">Hippie (S03E10)</label>
+    <input type="radio" id="costume_troy_hobbes" name="costume" value="Hobbes (S04E02)" class="troy hobbes"><label for="costume_troy_hobbes">Hobbes (S04E02)</label>
+    <input type="radio" id="costume_troy_invader" name="costume" value="Home Invader (S03E05)" class="troy invader"><label for="costume_troy_invader">Home Invader (S03E05)</label>
+    <input type="radio" id="costume_troy_morning" name="costume" value="In the Morning (S01E20)" class="troy morning"><label for="costume_troy_morning">In the Morning (S01E20)</label>
+    <input type="radio" id="costume_troy_kick" name="costume" value="Kickpuncher (S01E15)" class="troy kick"><label for="costume_troy_kick">Kickpuncher (S01E15)</label>
+    <input type="radio" id="costume_troy_clubs" name="costume" value="King of Clubs (S02E23)" class="troy clubs"><label for="costume_troy_clubs">King of Clubs (S02E23)</label>
+    <input type="radio" id="costume_troy_lotus" name="costume" value="Laser Lotus (S05E04)" class="troy lotus"><label for="costume_troy_lotus">Laser Lotus (S05E04)</label>
+    <input type="radio" id="costume_troy_letterman" name="costume" value="Letterman Jacket (S01E01)" class="troy letterman"><label for="costume_troy_letterman">Letterman Jacket (S01E01)</label>
+    <input type="radio" id="costume_troy_library" name="costume" value="Library Nerd (S03E17)" class="troy library"><label for="costume_troy_library">Library Nerd (S03E17)</label>
+    <input type="radio" id="costume_troy_michaeljackson" name="costume" value="Michael Jackson (S03E12)" class="troy michaeljackson"><label for="costume_troy_michaeljackson">Michael Jackson (S03E12)</label>
+    <input type="radio" id="costume_troy_mustache" name="costume" value="Mustache (S04E09)" class="troy mustache"><label for="costume_troy_mustache">Mustache (S04E09)</label>
+    <input type="radio" id="costume_troy_chloroform" name="costume" value="My Whole Brain is Crying (S02E02)" class="troy chloroform"><label for="costume_troy_chloroform">My Whole Brain is Crying (S02E02)</label>
+    <input type="radio" id="costume_troy_naked" name="costume" value="Naked (S03E20)" class="troy naked"><label for="costume_troy_naked">Naked (S03E20)</label>
+    <input type="radio" id="costume_troy_night" name="costume" value="Night Troy (S03E19)" class="troy night"><label for="costume_troy_night">Night Troy (S03E19)</label>
+    <input type="radio" id="costume_troy_operation" name="costume" value="Operation (S03E02)" class="troy operation"><label for="costume_troy_operation">Operation (S03E02)</label>
+    <input type="radio" id="costume_troy_orange" name="costume" value="Orange Paint (S02E24)" class="troy orange"><label for="costume_troy_orange">Orange Paint (S02E24)</label>
+    <input type="radio" id="costume_troy_paintball" name="costume" value="Paintball (S01E23)" class="troy paintball"><label for="costume_troy_paintball">Paintball (S01E23)</label>
+    <input type="radio" id="costume_troy_pajamas" name="costume" value="Pajamas (S02E09)" class="troy pajamas"><label for="costume_troy_pajamas">Pajamas (S02E09)</label>
+    <input type="radio" id="costume_troy_pantsuit" name="costume" value="Pant Suit (S02E15)" class="troy pantsuit"><label for="costume_troy_pantsuit">Pant Suit (S02E15)</label>
+    <input type="radio" id="costume_troy_pharaoh" name="costume" value="Pharaoh (S01E21)" class="troy pharaoh"><label for="costume_troy_pharaoh">Pharaoh (S01E21)</label>
+    <input type="radio" id="costume_troy_pumpkin" name="costume" value="Pumpkin (S02E19)" class="troy pumpkin"><label for="costume_troy_pumpkin">Pumpkin (S02E19)</label>
+    <input type="radio" id="costume_troy_ridley" name="costume" value="Ripley (S02E06)" class="troy ridley"><label for="costume_troy_ridley">Ripley (S02E06)</label>
+    <input type="radio" id="costume_troy_sexyvampire" name="costume" value="Sexy Dracula (S02E06)" class="troy sexyvampire"><label for="costume_troy_sexyvampire">Sexy Dracula (S02E06)</label>
+    <input type="radio" id="costume_troy_spidey" name="costume" value="Spiderman (S02E01)" class="troy spidey"><label for="costume_troy_spidey">Spiderman (S02E01)</label>
+    <input type="radio" id="costume_troy_football" name="costume" value="Star Quarterback (S01E06)" class="troy football"><label for="costume_troy_football">Star Quarterback (S01E06)</label>
+    <input type="radio" id="costume_troy_toga" name="costume" value="Toga (S01E22)" class="troy toga"><label for="costume_troy_toga">Toga (S01E22)</label>
+    <input type="radio" id="costume_troy_sewn" name="costume" value="Troy and Abed Sewn Together (S03E05)" class="troy sewn"><label for="costume_troy_sewn">Troy and Abed Sewn Together (S03E05)</label>
+    <input type="radio" id="costume_troy_troysoldier" name="costume" value="Troy Soldier (S02E11)" class="troy troysoldier"><label for="costume_troy_troysoldier">Troy Soldier (S02E11)</label>
+    <input type="radio" id="costume_troy_werewolf" name="costume" value="Werewolf (S01E09)" class="troy werewolf"><label for="costume_troy_werewolf">Werewolf (S01E09)</label>
+    <input type="radio" id="costume_troy_woodsman" name="costume" value="Woodsman (S03E07)" class="troy woodsman"><label for="costume_troy_woodsman">Woodsman (S03E07)</label>
+    <input type="radio" id="costume_troy_zombie" name="costume" value="Zombie (S02E06)" class="troy zombie"><label for="costume_troy_zombie">Zombie (S02E06)</label>
+    <h3>Vaughn Miller</h3>
+    <input type="radio" id="costume_vaughn_base" name="costume" value="Vaughn Miller (base)" class="vaughn base"><label for="costume_vaughn_base">Vaughn Miller (base)</label>
+    <h3>Vice Dean Laybourne</h3>
+    <input type="radio" id="costume_vicedean_base" name="costume" value="Vice Dean Laybourne (base)" class="vicedean base"><label for="costume_vicedean_base">Vice Dean Laybourne (base)</label>
+    <input type="radio" id="costume_vicedean_ghost" name="costume" value="Ghost (S03E22)" class="vicedean ghost"><label for="costume_vicedean_ghost">Ghost (S03E22)</label>
+    <input type="radio" id="costume_vicedean_stuff" name="costume" value="Going Through Some Stuff (S03E13)" class="vicedean stuff"><label for="costume_vicedean_stuff">Going Through Some Stuff (S03E13)</label>
+    <input type="radio" id="costume_vicedean_pajamas" name="costume" value="Pajamas (S03E13)" class="vicedean pajamas"><label for="costume_vicedean_pajamas">Pajamas (S03E13)</label>
+    <h3>Vicki Cooper</h3>
+    <input type="radio" id="costume_vicki_base" name="costume" value="Vicki Cooper (base)" class="vicki base"><label for="costume_vicki_base">Vicki Cooper (base)</label>
+    <input type="radio" id="costume_vicki_knight" name="costume" value="Chess Knight (S03E19)" class="vicki knight"><label for="costume_vicki_knight">Chess Knight (S03E19)</label>
+
+    <div class="character"></div>
+  </div>
+</div>
