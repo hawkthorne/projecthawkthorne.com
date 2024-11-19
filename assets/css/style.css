@@ -68,7 +68,7 @@ img {border-style: none;}
 
 body {
   font:15px/1.5 'Open Sans';
-  background:#20cefa url(/images/background.png);
+  background:#20cefa url('../images/background.png');
   padding:1em;
   color:rgb(93,69,65);
 }
@@ -81,7 +81,7 @@ p {margin:0 0 1.5em;}
 ul {list-style:none;padding-left:2em;}
 li {
   padding-left:1em;
-  background:url(/images/chevron.png) left center no-repeat;
+  background:url('../images/chevron.png') left center no-repeat;
 }
 
 @keyframes raiseHeader {
@@ -100,7 +100,7 @@ h1 {
 h1 a {
   display: block;
   color:transparent;
-  background:url(/images/logo.png) center center / contain no-repeat;
+  background:url('../images/logo.png') center center / contain no-repeat;
   height:auto;
   width:684px;
   max-width: 100%;
@@ -119,7 +119,7 @@ h1 a:before {
     display: block;
     width: 24px;
     height: 24px;
-    background: url(/images/sparkle.png) no-repeat;
+    background: url('../images/sparkle.png') no-repeat;
     animation: sparkle 1s steps(4) infinite;
     transform: scale(1.5);
 }
