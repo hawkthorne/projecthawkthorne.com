@@ -1,6 +1,8 @@
 # projecthawkthorne.com
 
-This repository is the public site for [projecthawkthorne.com](http://projecthawkthorne.com).
+[![Journey to the Center of Hawkthorne](https://projecthawkthorne.com/assets/images/metatag.png)](https://projecthawkthorne.com)
+
+This repository is the public site for [projecthawkthorne.com](https://projecthawkthorne.com).
 
 ## Development
 
