@@ -13,9 +13,10 @@ This 2d platformer is based on Community's [Digital Estate Planning](http://en.w
 
 ## Downloads
 
-- [Windows](https://github.com/hawkthorne/hawkthorne-journey/releases/download/v1.0.4/hawkthorne-win-x86.zip)
-- [macOS](https://github.com/hawkthorne/hawkthorne-journey/releases/download/v1.0.4/hawkthorne-osx.zip)
-- Linux: Install [LÖVE](https://love2d.org). Then download the [.love file](https://github.com/hawkthorne/hawkthorne-journey/releases/download/v1.0.4/hawkthorne.love) and run it.
+- [macOS](https://github.com/hawkthorne/hawkthorne-journey/releases/download/v1.1.0/hawkthorne-macos.zip)
+- [Windows 32bit](https://github.com/hawkthorne/hawkthorne-journey/releases/download/v1.1.0/hawkthorne-win32.zip)
+- [Windows 64bit](https://github.com/hawkthorne/hawkthorne-journey/releases/download/v1.1.0/hawkthorne-win64.zip)
+- [Linux](https://github.com/hawkthorne/hawkthorne-journey/releases/download/v1.1.0/hawkthorne-linux.AppImage)
 
 ## Development
 
