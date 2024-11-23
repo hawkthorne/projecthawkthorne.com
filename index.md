@@ -4,12 +4,14 @@ title: Journey to the Center of Hawkthorne
 ---
 This 2d platformer is based on Community's [Digital Estate Planning](http://en.wikipedia.org/wiki/Digital_Estate_Planning) episode. It's built using the [LÖVE](https://love2d.org) game engine. Please [report any issues or bugs](https://github.com/hawkthorne/hawkthorne-journey/issues) you have with the game!
 
-<love-game>
+<love-game data-memory="77594624">
   <canvas id="canvas" width="1056" height="672"></canvas>
   <noscript>
     Sorry, this game requires JavaScript.
   </noscript>
 </love-game>
+
+[Play the unfilmed Digital Estate Planning end tag](./end-tag.html).
 
 ## Downloads
 

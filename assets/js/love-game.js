@@ -4,7 +4,10 @@ class LoveGame extends HTMLElement {
   constructor() {
     super();
 
-    this.LIBRARIES = ["assets/js/game.js", "assets/js/love.js"];
+    this.LIBRARIES = [
+      new URL("game.js", import.meta.url),
+      new URL("love.js", import.meta.url)
+    ];
   }
 
   connectedCallback() {
@@ -32,10 +35,12 @@ class LoveGame extends HTMLElement {
   init() {
     this.Module = {
       arguments: ["./game.love"],
-      INITIAL_MEMORY: 77594624,
+      PACKAGE_NAME: this.dataset.game || "game.data",
+      INITIAL_MEMORY: parseInt(this.dataset.memory),
+      filePackagePrefixURL: new URL("game.data", import.meta.url).href.replace(/game.data$/, ""),
       printErr: console.error.bind(console),
       canvas: (() => {
-        const canvas = document.getElementById('canvas');
+        const canvas = this.querySelector('#canvas');
 
         // As a default initial behavior, pop up an alert when webgl context is lost. To make your
         // application robust, you may want to override this behavior before shipping!
